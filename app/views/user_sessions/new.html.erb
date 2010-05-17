@@ -1,0 +1,10 @@
+<% title "Login" %>
+
+<%= semantic_form_for( @user_session, :html => { :class => "pretty_form" } ) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+  <% end %>
+  
+  <%= image_submit_tag 'signin.png', :class => 'signup' %>
+<% end %>

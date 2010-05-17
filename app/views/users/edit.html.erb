@@ -1,0 +1,16 @@
+<% title "Edit Your Information" %>
+
+<%= semantic_form_for( @user, :html => { :class => "pretty_form" } ) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :username %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+    <%= f.input :city, :collection => @cities, :group_by => :state, :include_blank => false %>
+    <% if current_user.try(:role) == 'admin' %>
+      <%= f.input :role, :collection => User::ROLES %>
+    <% end %>
+  <% end %>
+  
+  <%= image_submit_tag 'update.png', :class => 'signup' %>
+<% end %>

@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  phone: MyString
+  address: MyText
+  website: MyString
+
+two:
+  name: MyString
+  phone: MyString
+  address: MyText
+  website: MyString

@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #3676B5 /* #4B7399 */;
+  font-family: Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #6698FF;
+  text-decoration: none;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: auto;
+  min-height: 100%;
+}
+
+#logonav {
+	background: url('../images/header.gif') no-repeat;
+	height: 40px;
+	padding: 12px 20px 32px 20px;
+}
+
+#logo a {
+  color: #000;
+  float: left;
+  font-size: 2em;
+  font-weight: bolder;
+  letter-spacing: -0.1em;
+  line-height: 0.5em;
+  text-decoration: none;
+}
+
+#topnav {
+  float: right;
+}
+
+#tagline, #comingsoon {
+  text-align: center;
+}
+
+#comingsoon img {
+  padding: 10px 0 40px;
+}
+
+#content {
+	padding: 40px 0px 45px 0px;
+	background-color: #888;
+	min-height: 300px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;	
+	-webkit-box-shadow: 2px 2px 5px #555;
+	-moz-box-shadow: 2px 2px 5px #555;
+	overflow: auto;
+	clear: both;
+}
+
+#yourcity {
+  float: left;
+  padding-left: 30px;
+}
+
+#yourbusiness {
+  float: right;
+  padding-right: 30px;
+}
+
+/* footer */
+#bottom {
+  position: relative;
+  background-color: #2e2e2e;
+  margin-top: -75px;
+}
+
+#footer {
+  width: 960px;
+  margin: 0 auto;
+	height: 75px;
+	clear: both;
+}
+
+#bottomnav {
+  text-align: left;
+  float: left;
+  color: white;
+  padding-top: 20px;
+}
+
+#connect {
+  text-align: right;
+  float: right;
+  color: white;
+  padding-top: 10px;
+}
+
+#connect p {
+  padding-bottom: 4px;
+  font-size: 1.2em;
+}

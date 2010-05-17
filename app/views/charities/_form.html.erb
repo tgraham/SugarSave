@@ -1,0 +1,7 @@
+<%= semantic_form_for( @charity, :html => { :class => "normal_form" } ) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :description, :input_html => { :size => '40x6' } %>
+  <% end %>
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+<% end %>

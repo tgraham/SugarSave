@@ -1,0 +1,15 @@
+one:
+  name: MyString
+  description: MyText
+  regular_price: 1
+  initial_discount: 1
+  max_discount: 1
+  max_threshold: 1
+
+two:
+  name: MyString
+  description: MyText
+  regular_price: 1
+  initial_discount: 1
+  max_discount: 1
+  max_threshold: 1

@@ -1,0 +1,22 @@
+<% title "Company" %>
+
+<div id="show">
+  <p>
+    <%= link_to @company.name, edit_company_path(@company) %>
+  </p>
+  <p>
+    <%= @company.phone %>
+  </p>
+  <p>
+    <%= @company.address %><br />
+    <%= @company.city.name %>, <%= @company.city.state.abbreviation %> <%= @company.zip_code %>
+  </p>
+  <p>
+    <%= link_to @company.website, @company.website, :target => "blank" %>
+  </p>
+</div>
+
+<p class="links">
+  <%= link_to "Remove", @company, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", companies_path %>
+</p>

@@ -1,0 +1,16 @@
+<% title "Charity" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @charity.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @charity.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_charity_path(@charity) %> |
+  <%= link_to "Destroy", @charity, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", charities_path %>
+</p>

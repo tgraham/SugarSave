@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title><%= yield(:title) || "SugarSave" %></title>
+    <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",
+    'reset', 'application2', 'flash' %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
+    "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application", "rails" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <%= render :partial => '/layouts/header' %>
+    <div id="container">
+      <div id="content">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}", :class => "hideable" %>
+        <% end %>
+        
+        <% if current_user.try(:role) == 'admin' %>
+          <%= render :partial => '/layouts/adminlinks' %>
+        <% end %>
+        
+        <%= yield %>
+
+      </div>
+    </div>
+    <%= render :partial => '/layouts/footer' %>
+  </body>
+</html>

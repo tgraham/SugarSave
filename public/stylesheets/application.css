@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #3676B5 /* #4B7399 */;
+  font-family: Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #6698FF;
+  text-decoration: none;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: auto;
+  min-height: 100%;
+}
+
+#logonav {
+	background: url('../images/header.gif') no-repeat;
+	height: 40px;
+	padding: 12px 20px 32px 20px;
+}
+
+#logo a {
+  color: #000;
+  float: left;
+  font-size: 2em;
+  font-weight: bolder;
+  letter-spacing: -0.1em;
+  line-height: 0.5em;
+  text-decoration: none;
+}
+
+#topnav {
+  float: right;
+}
+
+#content {
+	padding: 40px 0px 45px 0px;
+	background-color: #fff;
+	min-height: 300px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;	
+	-webkit-box-shadow: 2px 2px 5px #555;
+	-moz-box-shadow: 2px 2px 5px #555;
+	overflow: auto;
+	clear: both;
+}
+
+/* Show */
+#show {
+  padding-left: 40px;
+}
+
+#show p {
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* Tables */
+#companylist {
+  margin: 0 auto;
+}
+
+#companylist th {
+  text-decoration: underline;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+
+#companylist td {
+  padding: 5px 10px;
+}
+
+.links {
+  padding: 10px 0 10px 40px;
+}
+
+/* Forms */
+.normal_form {
+  padding-left: 40px;
+}
+
+.normal_form input[type=text], .normal_form textarea {
+  font: 13px 'Lucida Grande',Helvetica,Arial,sans-serif;
+  outline: 0 none;
+  padding: 5px;
+  border: 1px solid #97B5D2;
+  color: #25313C;
+  font-family: Georgia,Times,"Times New Roman",serif;
+  font-size: 18px;
+  width: 480px;
+}
+
+
+/* Pretty Form */
+.pretty_form label, .normal_form label {
+  color: #657788;
+  display: block;
+  font-family: Arial,Helvetica,Verdana,sans-serif;
+  font-size:  18px;
+  padding: 10px 0 5px;
+}
+
+.pretty_form input[type=text], .pretty_form input[type=password], .pretty_form input[type=checkbox], .pretty_form select {
+  font: 13px 'Lucida Grande',Helvetica,Arial,sans-serif;
+  outline: 0 none;
+  padding: 7px;
+  border: 1px solid #97B5D2;
+  color: #25313C;
+  font-family: Georgia,Times,"Times New Roman",serif;
+  font-size: 28px;
+  width: 480px;
+}
+
+.pretty_form li.error input[type=text], .pretty_form li.error input[type=password] {
+  border: 2px solid red;
+}
+
+/* Login Forms */
+.pretty_form li {
+  padding-top: 7px;
+  list-style-type: none;
+}
+
+.pretty_form {
+  width: 500px;
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+
+.pretty_form .title {
+  text-align: left;
+  width: 100%;
+	padding-bottom: 30px;
+}
+
+.pretty_form h1 {
+	font-size: 36px;
+}
+
+.signup {
+  padding-top: 20px;
+}
+
+/* footer */
+#bottom {
+  position: relative;
+  background-color: #2e2e2e;
+  margin-top: -75px;
+}
+
+#footer {
+  width: 960px;
+  margin: 0 auto;
+	height: 75px;
+	clear: both;
+}
+
+#bottomnav {
+  text-align: left;
+  float: left;
+  color: white;
+  padding-top: 20px;
+}
+
+#connect {
+  text-align: right;
+  float: right;
+  color: white;
+  padding-top: 10px;
+}
+
+#connect p {
+  padding-bottom: 4px;
+  font-size: 1.2em;
+}

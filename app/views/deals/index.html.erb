@@ -1,0 +1,25 @@
+<% title "Deals" %>
+
+<table id="tablelist">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Regular Price</th>
+    <th>Initial Discount</th>
+    <th>Max Discount</th>
+    <th>Max Threshold</th>
+  </tr>
+  <% for deal in @deals %>
+    <tr>
+      <td><%= link_to deal.name, edit_deal_path(deal) %></td>
+      <td><%= deal.description %></td>
+      <td>$<%= deal.regular_price %></td>
+      <td><%= deal.initial_discount %>%</td>
+      <td><%= deal.max_discount %>%</td>
+      <td><%= deal.max_threshold %> buys</td>
+      <td><%= link_to "Delete", deal, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p class="links"><%= link_to "New Deal", new_deal_path %></p>

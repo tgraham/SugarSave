@@ -1,0 +1,21 @@
+class Ability
+  include CanCan::Ability
+  
+  def initialize(user)
+    user ||= User.new #for non-logged in visitors
+    
+    if user.role == "admin"
+      can :manage, :all
+    else
+      if user.role == "metro"
+        can :read, :all
+      else
+        can :create, User
+        can [:show, :edit, :update], User do |current_user|
+          user.id == current_user.id || user.role == "admin"
+        end
+      end
+    end
+    
+  end
+end

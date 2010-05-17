@@ -1,0 +1,11 @@
+<%= semantic_form_for( @company, :html => { :class => 'normal_form' } ) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :city, :collection => @cities, :group_by => :state, :include_blank => false %>
+    <%= f.input :zip_code %>
+    <%= f.input :phone %>
+    <%= f.input :website %>
+  <% end %>
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+<% end %>

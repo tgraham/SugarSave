@@ -1,0 +1,32 @@
+<% title "Deal" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @deal.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @deal.description %>
+</p>
+<p>
+  <strong>Regular Price:</strong>
+  <%= @deal.regular_price %>
+</p>
+<p>
+  <strong>Initial Discount:</strong>
+  <%= @deal.initial_discount %>
+</p>
+<p>
+  <strong>Max Discount:</strong>
+  <%= @deal.max_discount %>
+</p>
+<p>
+  <strong>Max Threshold:</strong>
+  <%= @deal.max_threshold %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_deal_path(@deal) %> |
+  <%= link_to "Destroy", @deal, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", deals_path %>
+</p>

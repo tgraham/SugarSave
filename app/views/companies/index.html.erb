@@ -1,0 +1,19 @@
+<% title "Companies" %>
+
+<table id="tablelist">
+  <tr>
+    <th>Company</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  <% for company in @companies %>
+    <tr>
+      <td><%= link_to company.name, edit_company_path(company) %></td>
+      <td><%= company.city.name %></td>
+      <td><%= company.city.state.abbreviation %></td>
+      <td><%= link_to "Delete", company, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p class="links"><%= link_to "New Company", new_company_path %></p>
