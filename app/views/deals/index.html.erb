@@ -4,18 +4,16 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Regular Price</th>
-    <th>Initial Discount</th>
-    <th>Max Discount</th>
-    <th>Max Threshold</th>
+    <th>Price</th>
+    <th>Discounts</th>
+    <th>Threshold</th>
   </tr>
   <% for deal in @deals %>
     <tr>
-      <td><%= link_to deal.name, edit_deal_path(deal) %></td>
-      <td><%= deal.description %></td>
+      <td><%= link_to truncate_on(deal.name), edit_deal_path(deal) %></td>
+      <td><%= truncate_on(deal.description) %></td>
       <td>$<%= deal.regular_price %></td>
-      <td><%= deal.initial_discount %>%</td>
-      <td><%= deal.max_discount %>%</td>
+      <td><%= deal.initial_discount %>% => <%= deal.max_discount %>%</td>
       <td><%= deal.max_threshold %> buys</td>
       <td><%= link_to "Delete", deal, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>

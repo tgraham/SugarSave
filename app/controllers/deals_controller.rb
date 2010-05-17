@@ -5,9 +5,9 @@ class DealsController < ApplicationController
     if params[:city_name]
       city = City.where(:name => params[:city_name].capitalize)
       
-      @deals = Deal.where('city_id = ?', city)
+      @deals = Deal.where('city_id = ?', city).includes(:city)
     else
-      @deals = Deal.all
+      @deals = Deal.includes(:city)
     end
   end
   

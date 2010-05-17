@@ -98,11 +98,13 @@ a {
 #tablelist th {
   text-decoration: underline;
   font-size: 1.2em;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 #tablelist td {
   padding: 5px 10px;
+  font-size: .85em;
+  text-align: center;
 }
 
 .links {
