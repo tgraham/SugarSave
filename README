@@ -5,8 +5,10 @@ SugarSave Deal of The Day
 == gems
 
 nifty-generators
-devise
+AuthLogic
 formtastic
+CanCan
+ActiveMerchant
 
 == Adding Admins
 
