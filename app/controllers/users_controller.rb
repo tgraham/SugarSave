@@ -2,13 +2,7 @@ class UsersController < ApplicationController
   load_and_authorize_resource
   
   def index
-    if params[:city_name]
-      city = City.where(:name => params[:city_name])
-      
-      @users = User.where("city_id = ?", city)
-    else
-      @users = User.all
-    end
+    @users = User.all
   end
   
   def new

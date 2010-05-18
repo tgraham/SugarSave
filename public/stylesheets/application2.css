@@ -26,7 +26,6 @@ a {
   position: absolute;
   top: 0;
   width: 100%;
-  margin: 0 auto;
   z-index: -1;
 }
 
@@ -75,10 +74,21 @@ a {
 }
 
 #content {
-	padding: 95px 0px;
-	min-height: 300px;
-	overflow: auto;
-	/* clear: both; */
+  padding: 95px 0px;
+  min-height: 300px;
+/*  overflow: auto;*/
+}
+
+#deals {
+  padding: 20px;
+  background-color: #fff;
+  min-height: 300px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
+  -webkit-box-shadow: 2px 2px 5px #555;
+  -moz-box-shadow: 2px 2px 5px #555;
+  overflow: auto;
+  clear: both;
 }
 
 /* Show */
@@ -118,7 +128,7 @@ a {
 
 #adminlinks {
   border: 1px solid #888;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   background-color: #fff;
   padding: 10px;
 }
