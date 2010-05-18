@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def index
     if params[:city_name]
-      city = City.where(:name => params[:city_name].capitalize)
+      city = City.where(:name => params[:city_name])
       
       @users = User.where("city_id = ?", city)
     else
@@ -33,10 +33,10 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
-      if current_user.role == 'admin'
+      if current_user.try(:role) == 'admin'
         redirect_to users_path
       else
-        redirect_to root_url
+        redirect_to '/'+current_user.city.name.gsub(/ /,'')
       end
     else
       render :action => 'edit'
