@@ -1,0 +1,17 @@
+<% title "Cities" %>
+
+<table id="tablelist">
+  <tr>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  <% for city in @cities %>
+    <tr>
+      <td><%= link_to city.name, edit_city_path(city) %></td>
+      <td><%= city.state.abbreviation %></td>
+      <td><%= link_to "Delete", city, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New City", new_city_path %></p>

@@ -5,13 +5,12 @@ Sugar::Application.routes.draw do |map|
   match '/register', :to => 'users#new', :as => :register
   
   match '/dashboard', :to => 'static#dashboard', :as => :admin
+  match '/coming_soon', :to => 'static#coming_soon'
   
-  match '/users(/:city_name)', :to => 'users#index'
-  match '/deals(/:city_name)', :to => 'deals#index'
-  
-  resources :users, :user_sessions, :companies, :charities, :deals
+  resources :users, :user_sessions, :companies, :charities, :deals, :cities
   
   root :to => 'static#index'
   
+  match '/:city_name', :to => 'deals#show'
   match '*path', :to => 'static#index'
 end

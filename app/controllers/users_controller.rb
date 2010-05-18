@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def create
     if @user.save
       flash[:notice] = "Registration Successful."
-      if current_user.role == 'admin'
+      if current_user.try(:role) == 'admin'
         redirect_to users_path
       else
         redirect_to login_path

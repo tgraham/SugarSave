@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
       if current_user.role == 'admin'
         redirect_to admin_url
       else
-        redirect_to root_url
+        redirect_to '/'+current_user.city.name.downcase
       end
     else
       render :action => 'new'

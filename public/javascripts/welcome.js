@@ -14,6 +14,7 @@ $(function() {
   
   $.each($('.hideable'), function() {
     $(this).append('<a href="#" class="hide-link">[X]</a>');
+    $(this).delay(3000).fadeOut(1000);
   });
 
   $('a.hide-link').click(function() {

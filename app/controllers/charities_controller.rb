@@ -34,7 +34,7 @@ class CharitiesController < ApplicationController
   
   def destroy
     @charity.destroy
-    flash[:notice] = "Successfully destroyed charity."
+    flash[:notice] = "Successfully removed charity."
     redirect_to charities_url
   end
 end
