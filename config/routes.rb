@@ -6,6 +6,7 @@ Sugar::Application.routes.draw do |map|
   
   match '/dashboard', :to => 'static#dashboard', :as => :admin
   match '/coming_soon', :to => 'static#coming_soon'
+  match '/about', :to => 'static#about'
   
   resources :users, :user_sessions, :companies, :charities, :deals, :cities
   

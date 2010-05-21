@@ -36,17 +36,6 @@
 
       </div>
     </div>
-    <div id="bottom">
-      <div id="footer">
-        <div id="bottomnav">
-          <p>About | Contact Us | TOS | Privacy Policy</p>
-        </div>
-        <div id="connect">
-          <p>connect with us</p>
-          <%= link_to image_tag('twitter.png'), 'http://twitter.com/SugarSave', :target => '_blank' %> 
-          <%= link_to image_tag('facebook.png'), 'http://facebook.com/pages/SugarSave/276344549259', :target => '_blank' %>
-        </div>
-      </div>
-    </div>
+    <%= render :partial => '/layouts/footer' %>
   </body>
 </html>
