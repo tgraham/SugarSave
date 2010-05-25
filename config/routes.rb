@@ -1,4 +1,8 @@
 Sugar::Application.routes.draw do |map|
+  resources :fine_prints
+
+  resources :highlights
+
 
   match '/login', :to => 'user_sessions#new', :as => :login
   match '/logout', :to => 'user_sessions#destroy', :as => :logout
@@ -7,6 +11,7 @@ Sugar::Application.routes.draw do |map|
   match '/dashboard', :to => 'static#dashboard', :as => :admin
   match '/coming_soon', :to => 'static#coming_soon'
   match '/about', :to => 'static#about'
+  match '/sugarbucks', :to => 'static#sugarbucks'
   
   resources :users, :user_sessions, :companies, :charities, :deals, :cities
   

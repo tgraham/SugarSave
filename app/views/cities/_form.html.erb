@@ -1,4 +1,7 @@
 <%= semantic_form_for( @city, :html => { :class => "normal_form" } ) do |f| %>
-  <%= f.inputs %>
+  <%= f.inputs do %>
+    <%= f.input :state %>
+    <%= f.input :name %>
+  <% end %>
   <%= image_submit_tag 'submit.png', :class => 'signup' %>
 <% end %>

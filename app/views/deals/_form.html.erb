@@ -2,6 +2,25 @@
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :description %>
+  <% end %>
+  
+  <p><label>Fine Print</label></p>
+  <%= f.semantic_fields_for :fine_prints do |fp| %>
+    <%= fp.inputs do %>
+      <%= fp.input :description, :label => false %>
+      <br />
+    <% end %>
+  <% end %>
+  
+  <p><label>Highlights</label></p>
+  <%= f.semantic_fields_for :highlights do |hl| %>
+    <%= hl.inputs do %>
+      <%= hl.input :description, :label => false %>
+      <br />
+    <% end %>
+  <% end %>
+  
+  <%= f.inputs do %>
     <%= f.input :company, :collection => @companies %>
     <%= f.input :city, :collection => @cities, :group_by => :state %>
     <%= f.input :regular_price %>

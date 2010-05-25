@@ -1,0 +1,19 @@
+<% title "Fine Prints" %>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Deal</th>
+  </tr>
+  <% for fine_print in @fine_prints %>
+    <tr>
+      <td><%= fine_print.description %></td>
+      <td><%= fine_print.deal_id %></td>
+      <td><%= link_to "Show", fine_print %></td>
+      <td><%= link_to "Edit", edit_fine_print_path(fine_print) %></td>
+      <td><%= link_to "Destroy", fine_print, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Fine Print", new_fine_print_path %></p>

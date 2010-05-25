@@ -1,0 +1,19 @@
+<% title "Highlights" %>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Deal</th>
+  </tr>
+  <% for highlight in @highlights %>
+    <tr>
+      <td><%= highlight.description %></td>
+      <td><%= highlight.deal_id %></td>
+      <td><%= link_to "Show", highlight %></td>
+      <td><%= link_to "Edit", edit_highlight_path(highlight) %></td>
+      <td><%= link_to "Destroy", highlight, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Highlight", new_highlight_path %></p>

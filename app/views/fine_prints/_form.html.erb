@@ -1,0 +1,12 @@
+<%= form_for @fine_print do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :deal_id %><br />
+    <%= f.text_field :deal_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

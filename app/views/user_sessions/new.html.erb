@@ -1,6 +1,7 @@
 <% title "Login" %>
 
 <%= semantic_form_for( @user_session, :html => { :class => "pretty_form" } ) do |f| %>
+  <%= f.semantic_errors %>
   <%= f.inputs do %>
     <%= f.input :username %>
     <%= f.input :password %>

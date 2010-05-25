@@ -7,10 +7,9 @@ class DealsController < ApplicationController
   
   def show
     if params[:city_name]
-      city_name = params[:city_name].gsub(/ /, "").capitalize
-      city = City.where(:name => city_name)
+      city = City.where(:search_name => params[:city_name])
       
-      @deal = Deal.where('city_id = ?', city).includes(:city).last
+      @deal = Deal.where('city_id = ?', city).where('deal_date = ?', Date.current.strftime("%Y-%m-%d").to_s).where('approved = ?', true).includes(:city).last
       
       if city.count == 0
         # Need to redirect to form so user can request a city
@@ -27,6 +26,8 @@ class DealsController < ApplicationController
   end
   
   def new
+   5.times { @deal.fine_prints.build }
+   5.times { @deal.highlights.build }
   end
   
   def create
@@ -52,7 +53,7 @@ class DealsController < ApplicationController
   
   def destroy
     @deal.destroy
-    flash[:notice] = "Successfully destroyed deal."
+    flash[:notice] = "Successfully removed deal."
     redirect_to deals_url
   end
 end

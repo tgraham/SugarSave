@@ -5,7 +5,7 @@
         <%= link_to "SUGAR$AVE", '/dashboard' %>
       <% else %>
         <% if current_user %>
-          <%= link_to "SUGAR$AVE", '/'+current_user.city.name.gsub(/ /,'') %>
+          <%= link_to "SUGAR$AVE", '/'+current_user.city.search_name %>
         <% else %>
           <%= link_to "SUGAR$AVE", root_path %>
         <% end %>

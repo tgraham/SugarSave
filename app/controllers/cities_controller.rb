@@ -2,7 +2,7 @@ class CitiesController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @cities = City.all
+    @cities = City.includes(:state)
   end
   
   def show
@@ -26,7 +26,7 @@ class CitiesController < ApplicationController
   def update
     if @city.update_attributes(params[:city])
       flash[:notice] = "Successfully updated city."
-      redirect_to @city
+      redirect_to cities_path
     else
       render :action => 'edit'
     end

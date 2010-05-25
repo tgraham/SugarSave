@@ -31,6 +31,12 @@
 }
 
 /* Session errors */
+ul.errors { 
+  color:#cc0000; 
+  margin:0.5em 0 1.5em 25%; 
+  list-style:square;
+}
+
 .fieldWithErrors {
   display: inline;
 }

@@ -26,11 +26,12 @@ class UsersController < ApplicationController
   
   def update
     if @user.update_attributes(params[:user])
+      city = City.where('id = ?', params[:user][:city_id]).last
       flash[:notice] = "Successfully updated user."
       if current_user.try(:role) == 'admin'
         redirect_to users_path
       else
-        redirect_to '/'+current_user.city.name.gsub(/ /,'')
+        redirect_to '/'+city.search_name
       end
     else
       render :action => 'edit'

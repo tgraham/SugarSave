@@ -5,7 +5,4 @@ class StaticController < ApplicationController
   
   def dashboard
   end
-  
-  def coming_soon
-  end
 end
