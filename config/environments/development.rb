@@ -17,17 +17,15 @@ Sugar::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   
-  # ActiveMerchant setup
-  # config.after_initialize do
-  #   ActiveMerchant::Billing::Base.mode = :test
-  # end
-  # 
-  # config.to_prepare do
-  #   OrderTransaction.gateway = 
-  #     ActiveMerchant::Billing::AuthorizeNetGateway.new(
-  #       :login    => '8Y6gAv8p',
-  #       :password => '326EsxLh5252W7ku',
-  #       :test     => true
-  #     )
-  # end
+  # Mail configuration for Gmail
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'sugarsave.com',
+    :user_name            => 'mailer',
+    :password             => 'SSm@il3r',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
+    
 end

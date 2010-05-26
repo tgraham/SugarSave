@@ -2,14 +2,16 @@
 
 <table id="tablelist">
   <tr>
-    <th>Username</th>
+    <th>User Name
+    <th>Login Name</th>
     <th>Email</th>
     <th>City</th>
     <th>Registration Date</th>
   </tr>
   <% for user in @users %>
     <tr>
-      <td><%= link_to user.username, edit_user_path(user) %></td>
+      <td><%= link_to user.full_name(user), edit_user_path(user) %></td>
+      <td><%= user.username %></td>
       <td><%= user.email %></td>
       <td><%= user.city.name %></td>
       <td><%= user.created_at.strftime("%b %d, %Y") %></td>
