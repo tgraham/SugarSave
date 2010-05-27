@@ -23,7 +23,7 @@ Sugar::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'sugarsave.com',
-    :user_name            => 'mailer',
+    :user_name            => 'mailer@sugarsave.com',
     :password             => 'SSm@il3r',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
