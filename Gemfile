@@ -2,7 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
 
-gem 'sqlite3-ruby',     :require => 'sqlite3'
+group :development do
+  gem 'sqlite3-ruby',     :require => 'sqlite3'
+end
+
+group :production do
+  gem 'mysql'
+end
+
 gem 'nifty-generators'
 gem 'cancan'
 gem 'authlogic',        :git => 'git://github.com/odorcicd/authlogic.git',        :branch => 'rails3'
