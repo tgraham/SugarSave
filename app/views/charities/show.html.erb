@@ -8,6 +8,9 @@
   <strong>Description:</strong>
   <%= @charity.description %>
 </p>
+<p>
+  <%= image_tag @charity.photo.url %>
+</p>
 
 <p>
   <%= link_to "Edit", edit_charity_path(@charity) %> |

@@ -9,11 +9,4 @@ AuthLogic
 formtastic
 CanCan
 ActiveMerchant
-
-== Adding Admins
-
-Register a user from web interface, then:
-
-From the Console: (rails c)
-
-User.first.update_attribute(:role, "admin")
+Paperclip

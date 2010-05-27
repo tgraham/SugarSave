@@ -1,8 +1,11 @@
 class Deal < ActiveRecord::Base
+  has_attached_file :photo, :styles => { :medium => "320x250>", :thumb => "128x100>" }
+  
   attr_accessible :name, :description, :regular_price, :initial_discount, :max_discount, :max_threshold, 
-                  :deal_date, :city_id, :company_id, :approved, :fine_prints_attributes
+                  :deal_date, :city_id, :company_id, :approved, :fine_prints_attributes, :photo, :photo_file_name
   belongs_to :company
   belongs_to :city
+  
   has_many :fine_prints, :dependent => :destroy
   has_many :highlights, :dependent => :destroy
   

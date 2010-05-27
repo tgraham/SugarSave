@@ -1,6 +1,11 @@
-<%= semantic_form_for( @deal, :html => { :class => "normal_form"} ) do |f| %>
+<%= semantic_form_for( @deal, :html => { :multipart => true, :class => "normal_form"} ) do |f| %>
   <%= f.inputs do %>
     <%= f.input :name %>
+    <%= f.input :photo %>
+    <% unless @deal.photo.url.blank? %>
+      <br />
+      <%= image_tag @deal.photo.url(:thumb) %>
+    <% end %>
     <%= f.input :description %>
   <% end %>
   
