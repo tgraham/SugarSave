@@ -1,8 +1,8 @@
-<%= semantic_form_for( @charity, :html => { :class => "normal_form" } ) do |f| %>
+<%= semantic_form_for( @charity, :html => { :multipart => true, :class => "normal_form" } ) do |f| %>
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :photo %>
-    <% unless @charity.photo.url.blank? %>
+    <% unless @charity.photo_file_name.nil? %>
       <br />
       <%= image_tag @charity.photo.url(:thumb) %>
     <% end %>

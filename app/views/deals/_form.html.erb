@@ -2,7 +2,7 @@
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :photo %>
-    <% unless @deal.photo.url.blank? %>
+    <% unless @deal.photo_file_name.nil? %>
       <br />
       <%= image_tag @deal.photo.url(:thumb) %>
     <% end %>

@@ -1,5 +1,7 @@
 class Deal < ActiveRecord::Base
-  has_attached_file :photo, :styles => { :medium => "320x250>", :thumb => "128x100>" }
+  has_attached_file :photo, :styles => { :medium => "320x250>", :thumb => "128x100>" },
+                    :url => "/assets/deals/:id/:style/:basename.:extension",
+                    :path => ":rails_root/public/assets/deals/:id/:style/:basename.:extension"
   
   attr_accessible :name, :description, :regular_price, :initial_discount, :max_discount, :max_threshold, 
                   :deal_date, :city_id, :company_id, :approved, :fine_prints_attributes, :photo, :photo_file_name
