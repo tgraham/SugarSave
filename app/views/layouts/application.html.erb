@@ -3,9 +3,9 @@
   <head>
     <title><%= yield(:title) || "SugarSave" %></title>
     <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",
-    'reset', 'application2', 'flash', :cache => true %>
+    'reset', 'application2', 'flash', :cache => 'styles' %>
     <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
-    "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application", "rails", :cache => true %>
+    "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application", "rails", :cache => 'scripts' %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
