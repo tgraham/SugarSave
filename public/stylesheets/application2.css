@@ -30,6 +30,10 @@ h2 {
   font-size: 1.2em;
 }
 
+hr {
+  color: #888;
+}
+
 #topfade {
   position: absolute;
   top: 0;
@@ -93,7 +97,7 @@ h2 {
 }
 
 #boxed {
-  padding: 20px;
+  padding: 15px;
   background-color: #fff;
   min-height: 300px;
   -webkit-border-radius: 10px;
@@ -102,6 +106,87 @@ h2 {
   -moz-box-shadow: 2px 2px 5px #555;
   overflow: auto;
   clear: both;
+}
+
+/* Deal Presentation Screen */
+#show_deal {
+  float: left;
+  width: 70%;
+}
+
+.deal_name {
+  font-size: 2.5em;
+  color: #00107A;
+  padding-bottom: 15px;
+}
+
+#deal_action {
+  padding-top: 15px;
+}
+
+.deal_photo {
+  float: right;
+  padding-right: 20px;
+}
+
+.buy_count_down {
+  width: 320px;
+  text-align: center;
+}
+
+.time_to_buy {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.height80 {
+  padding-top: 20px;
+  min-height: 80px;
+}
+
+table.deal_details {
+  width: 100%;
+}
+
+.deal_details td {
+  text-align: center;
+  width: 33%;
+}
+
+#deal_date_field {
+  visibility: hidden;
+}
+
+#side_bar {
+  padding: 2px;
+  float: right;
+  border-left: 1px solid #888;
+  min-height: 300px;
+  width: 29%;
+}
+
+#social {
+  text-align: right;
+  padding-bottom: 15px;
+}
+
+#charitable {
+  padding: 15px 0 15px 5px;
+}
+
+#charitable img {
+  float: right;
+  padding: 5px;
+}
+
+.charitable_title {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.charitable_blurb {
+  font-size: .8em;
+  padding-top: 15px;
 }
 
 /* Show */
@@ -249,4 +334,8 @@ h2 {
 #connect p {
   padding-bottom: 4px;
   font-size: 1.2em;
+}
+
+.readable {
+  line-height: 1.5em;
 }

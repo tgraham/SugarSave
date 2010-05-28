@@ -1,0 +1,87 @@
+#countdown_dashboard {
+	height: 75px;
+	text-align: center;
+}
+
+.dash {
+	width: 60px; /* 110px */
+	height: 72px; /* 114px */
+	background: transparent url('../images/countdown/dash.png') 0 0 no-repeat;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+
+.dash .digit {
+	font-size: 35pt; /* 55pt */
+	font-weight: bold;
+	float: left;
+	width: 30px; /* 55px */
+	text-align: center;
+	font-family: Times;
+	color: #555;
+	position: relative;
+	padding-top: 5px;
+}
+
+.dash_title {
+  text-align: center;
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	font-size: 8pt;
+	color: #555;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 100%;
+}
+
+/*#countdown_dashboard {
+  height: 96px;
+  margin-left: 125px;
+}
+
+.dash {
+  width: 138px;
+  height: 96px;
+  background: transparent url('../images/countdown/dash.png') 0 0 no-repeat;
+  float: left;
+  margin-left: 2px;
+  padding-left: 13px;
+  position: relative;
+  color: #333;
+}
+
+.weeks_dash {
+  background: transparent url('../images/countdown/dark_weeks_dash.png') 0 0 no-repeat;
+}
+
+.days_dash {
+  background: transparent url('../images/countdown/dark_days_dash.png') 0 0 no-repeat;
+}
+
+.hours_dash {
+  clear: left;
+  background: transparent url('../images/countdown/dark_hours_dash.png') 0 0 no-repeat;
+}
+
+.minutes_dash {
+  background: transparent url('../images/countdown/dark_minutes_dash.png') 0 0 no-repeat;
+}
+
+.seconds_dash {
+  background: transparent url('../images/countdown/dark_seconds_dash.png') 0 0 no-repeat;
+}
+
+.dash .digit {
+  font: bold 52pt Verdana;
+  font-weight: bold;
+  float: left;
+  width: 59px;
+  text-align: center;
+  position: relative;
+}
+
+.dash_title {
+  display: none;
+}*/

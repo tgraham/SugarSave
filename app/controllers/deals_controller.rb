@@ -9,7 +9,10 @@ class DealsController < ApplicationController
     if params[:city_name]
       city = City.where(:search_name => params[:city_name])
       
-      @deal = Deal.where('city_id = ?', city).where('deal_date = ?', Date.current.strftime("%Y-%m-%d").to_s).where('approved = ?', true).includes(:city).last
+      today = Date.current.strftime("%Y-%m-%d").to_s
+      
+      @deal = Deal.where('city_id = ?', city).where('deal_date = ?', today).where('approved = ?', true).includes(:city).last
+      @charity = Charity.where('city_id = ?', city).where('start_date <= ? and end_date >= ?', today, today).includes(:city).last
       
       if city.count == 0
         # Need to redirect to form so user can request a city

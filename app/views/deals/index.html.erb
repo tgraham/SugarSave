@@ -3,7 +3,7 @@
 <table id="tablelist">
   <tr>
     <th>Name</th>
-    <th>Description</th>
+    <th>Blurb</th>
     <th>Price</th>
     <th>Discounts</th>
     <th>Threshold</th>
@@ -11,7 +11,7 @@
   <% for deal in @deals %>
     <tr>
       <td><%= link_to truncate_on(deal.name), edit_deal_path(deal) %></td>
-      <td><%= truncate_on(deal.description) %></td>
+      <td><%= truncate_on(deal.blurb) %></td>
       <td>$<%= deal.regular_price %></td>
       <td><%= deal.initial_discount %>% => <%= deal.max_discount %>%</td>
       <td><%= deal.max_threshold %> buys</td>

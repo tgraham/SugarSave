@@ -1,20 +1,73 @@
 <% title "Deal" %>
 
 <div id="boxed">
-  <p>
-    <strong>Name:</strong>
-    <%= @deal.name %>
-  </p>
-  <p>
-    <strong>Description:</strong>
-    <%= @deal.description %>
-  </p>
-  <p>
-    <strong>Regular Price:</strong>
-    <%= @deal.regular_price %>
-  </p>
-  <p>
-    <strong>Initial Discount:</strong>
-    <%= @deal.initial_discount %>
-  </p>
+  <div id="show_deal">
+    <p class="deal_name">Today's SugarDeal:
+      <%= @deal.name %>
+    </p>
+    <hr />
+    <div id="deal_action">
+      <div class="deal_photo">
+        <%= image_tag @deal.photo.url %>
+      </div>
+      <div class="buy_count_down">
+        <%= image_tag 'buy-this-deal.png' %>
+        <div class="height80">
+        <table class="deal_details">
+            <th>Value</th><th>Discount</th><th>Savings</th>
+            <tr>
+              <td>$<%= @deal.regular_price %></td>
+              <td><%= @deal.discount %>%</td>
+              <td>$<%= @deal.savings %></td>
+            </tr>
+        </table>
+        </div>
+        <div class="time_to_buy">TIME LEFT TO BUY</div>
+        <div id='deal_date_field'><%= @deal.deal_date %></div>
+        <br />
+        <%= render :partial => 'countdown' %>
+        <br />
+      </div>
+    </div>
+    <p>
+      <strong>Crucial Deal Details</strong>
+      <% for fine_print in @deal.fine_prints %>
+        fine_print.description
+      <% end %>
+    </p>
+    <p>
+      <strong>The Good Stuff</strong>
+    </p>
+    <p>
+      <strong>Blurb Title:</strong>
+      <%= @deal.blurb_title %>
+    </p>
+    <p>
+      <strong>Blurb:</strong>
+      <%= @deal.blurb %>
+    </p>
+    <p>
+      <strong>Regular Price:</strong>
+      <%= @deal.regular_price %>
+    </p>
+    <p>
+      <strong>Initial Discount:</strong>
+      <%= @deal.initial_discount %>
+    </p>
+  </div>
+  <div id="side_bar">
+    <div id="social">
+      <%= image_tag 'share.png' %>
+      <%= link_to(image_tag('facebook-sq.png', :width => 40),  "http://facebook.com/share.php?u=http://sugarsave.com/#{@deal.city.search_name}/&t=#{@deal.blurb_title}", :target => :blank) %>
+      <%= image_tag 'twitter-sq.png', :width => 40 %>
+      <%= image_tag 'email-sq.png', :width => 40 %>
+    </div>
+    <hr />
+    <div id="charitable">
+      <p class="charitable_title"><%= image_tag @charity.photo.url(:thumb) %> <%= link_to "This Week's Featured Charity*", charity_path(@charity) %><p>
+
+      <p class="charitable_blurb">*Each week SugarSave features one local charity. We spread the word about their good works and donate a portion of SugarDeal sales to their cause. Sweet!</p>
+    </div>
+    <hr />
+  </div>
 </div>
