@@ -12,5 +12,7 @@ $(function() {
   });
   
   $("#deal_deal_date").datepicker();
+  $("#charity_start_date").datepicker();
+  $("#charity_end_date").datepicker();
     
 });

@@ -7,6 +7,8 @@
       <%= image_tag @charity.photo.url(:thumb) %>
     <% end %>
     <%= f.input :description, :input_html => { :size => '40x6' } %>
+    <%= f.input :start_date, :as => :string, :label => "Start Date" %>
+    <%= f.input :end_date, :as => :string, :label => "End Date" %>
   <% end %>
   <%= image_submit_tag 'submit.png', :class => 'signup' %>
 <% end %>

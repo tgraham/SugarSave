@@ -3,5 +3,5 @@ class Charity < ActiveRecord::Base
                     :url => "/assets/charities/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/charities/:id/:style/:basename.:extension"
   
-  attr_accessible :name, :description, :photo, :photo_file_name
+  attr_accessible :name, :description, :photo, :photo_file_name, :start_date, :end_date
 end
