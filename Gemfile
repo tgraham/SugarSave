@@ -17,3 +17,4 @@ gem 'formtastic',       :git => "git://github.com/justinfrench/formtastic.git", 
 # gem 'activemerchant',   :git => 'http://github.com/merbjedi/active_merchant.git', :branch => 'rails3'
 gem 'paperclip',        :git => 'git://github.com/thoughtbot/paperclip.git',      :branch => 'rails3'
 gem 'gravtastic'
+gem 'newrelic_rpm', :require => false
