@@ -81,6 +81,11 @@ h2 {
   color: #fff;
 }
 
+#topnav img {
+  margin-top: -5px;
+  vertical-align: middle;
+}
+
 #content {
   padding: 95px 0px;
   min-height: 300px;
