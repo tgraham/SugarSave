@@ -29,8 +29,8 @@ class DealsController < ApplicationController
   end
   
   def new
-   5.times { @deal.fine_prints.build }
-   5.times { @deal.highlights.build }
+    5.times { @deal.fine_prints.build }
+    5.times { @deal.highlights.build }
   end
   
   def create
@@ -43,6 +43,8 @@ class DealsController < ApplicationController
   end
   
   def edit
+    5.times { @deal.fine_prints.build }
+    5.times { @deal.highlights.build }
   end
   
   def update

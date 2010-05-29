@@ -8,7 +8,7 @@
   <% for charity in @charities %>
     <tr>
       <td><%= link_to charity.name, edit_charity_path(charity) %></td>
-      <td><%= charity.description %></td>
+      <td><%= truncate_on(charity.description) %></td>
       <td><%= link_to "Delete", charity, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
