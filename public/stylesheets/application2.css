@@ -144,17 +144,55 @@ hr {
   min-height: 80px;
 }
 
-table.deal_details {
+table.deal_details_table {
   width: 100%;
 }
 
-.deal_details td {
+.deal_details_table td {
   text-align: center;
   width: 33%;
 }
 
 #deal_date_field {
   visibility: hidden;
+}
+
+.deal_details_div {
+  float: left;
+  width: 300px;
+  padding-top: 20px;
+}
+
+.deal_details_div p, .good_stuff_div p, .blurb_div p, .company_div p {
+  font-size: 1.2em;
+}
+
+.good_stuff_div {
+  float: right;
+  width: 300px;
+  padding-top: 20px;
+}
+
+.blurb_div {
+  width: 400px;
+  float: left;
+  padding-top: 20px;
+}
+
+.company_div {
+  width: 200px;
+  float: right;
+  padding-top: 20px;
+}
+
+.details {
+  list-style-type: circle;
+  padding: 10px 0px 10px 25px;
+}
+
+.sugarbucks {
+  font-size: .8em;
+  line-height: 1em;
 }
 
 #side_bar {
@@ -171,7 +209,7 @@ table.deal_details {
 }
 
 #charitable {
-  padding: 15px 0 15px 5px;
+  padding: 15px 0 15px 10px;
 }
 
 #charitable img {

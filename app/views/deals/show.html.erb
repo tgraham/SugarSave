@@ -6,54 +6,75 @@
       <%= @deal.name %>
     </p>
     <hr />
+    
     <div id="deal_action">
       <div class="deal_photo">
         <%= image_tag @deal.photo.url %>
       </div>
+      
       <div class="buy_count_down">
         <%= image_tag 'buy-this-deal.png' %>
         <div class="height80">
-        <table class="deal_details">
-            <th>Value</th><th>Discount</th><th>Savings</th>
-            <tr>
-              <td>$<%= @deal.regular_price %></td>
-              <td><%= @deal.discount %>%</td>
-              <td>$<%= @deal.savings %></td>
-            </tr>
-        </table>
+          <table class="deal_details_table">
+              <th>Value</th><th>Discount</th><th>Savings</th>
+              <tr>
+                <td>$<%= @deal.regular_price %></td>
+                <td><%= @deal.discount %>%</td>
+                <td>$<%= @deal.savings %></td>
+              </tr>
+          </table>
         </div>
+        
         <div class="time_to_buy">TIME LEFT TO BUY</div>
+        
         <div id='deal_date_field'><%= @deal.deal_date %></div>
         <br />
         <%= render :partial => 'countdown' %>
         <br />
       </div>
     </div>
-    <p>
-      <strong>Crucial Deal Details</strong>
+    
+    <div class="deal_details_div readable">
+      <p><strong>Crucial Deal Details</strong></p>
+      <ul class="details">
       <% for fine_print in @deal.fine_prints %>
-        fine_print.description
+        <li><%= fine_print.description %></li>
       <% end %>
-    </p>
-    <p>
-      <strong>The Good Stuff</strong>
-    </p>
-    <p>
-      <strong>Blurb Title:</strong>
-      <%= @deal.blurb_title %>
-    </p>
-    <p>
-      <strong>Blurb:</strong>
+      </ul>
+    </div>
+    
+    <div class="good_stuff_div readable">
+      <p><strong>The Good Stuff</strong></p>
+      <ul class="details">
+      <% for highlight in @deal.highlights %>
+        <li><%= highlight.description %></li>
+      <% end %>
+      </ul>
+    </div>
+    
+    <div class="blurb_div readable">
+      <p><strong><%= @deal.blurb_title %></strong></p>
       <%= @deal.blurb %>
-    </p>
-    <p>
-      <strong>Regular Price:</strong>
-      <%= @deal.regular_price %>
-    </p>
-    <p>
-      <strong>Initial Discount:</strong>
-      <%= @deal.initial_discount %>
-    </p>
+    </div>
+    
+    <div class="company_div readable">
+      <p><strong>The Company</strong></p>
+      <%= link_to @deal.company.name, @deal.company.website %><br />
+      <%= @deal.company.address %><br />
+      <%= @deal.company.city.name+', '+@deal.company.city.state.abbreviation+' '+@deal.company.zip_code.to_s %><br />
+      <%= @deal.company.phone %>
+      <br /><br />
+      <div class="sugarbucks">
+        <%= image_tag 'dollar.jpg', :width => 145 %>
+        <strong>SugarBucks Sweeten The Deal!</strong>
+        <ul class="details">
+          <li>Every Deal comes with a SugarBucks code.</li>
+          <li>Every purchase of today's SugarDeal increases the value of the code.</li>
+          <li>You can apply the code to a future SugarDeal purchase.</li>
+        </ul>
+        <%= link_to 'Click here for more details.', '/sugarbucks' %>
+      </div>
+    </div>
   </div>
   <div id="side_bar">
     <div id="social">
