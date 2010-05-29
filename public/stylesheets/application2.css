@@ -121,12 +121,16 @@ hr {
 }
 
 #deal_action {
+  float: left;
   padding-top: 15px;
+  width: 300px;
 }
 
 .deal_photo {
   float: right;
-  padding-right: 20px;
+  padding: 15px 20px 15px 10px;
+  width: 320px;
+  text-align: right;
 }
 
 .buy_count_down {
@@ -161,6 +165,7 @@ table.deal_details_table {
   float: left;
   width: 300px;
   padding-top: 20px;
+  clear: left;
 }
 
 .deal_details_div p, .good_stuff_div p, .blurb_div p, .company_div p {

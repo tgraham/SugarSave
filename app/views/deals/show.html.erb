@@ -8,10 +8,6 @@
     <hr />
     
     <div id="deal_action">
-      <div class="deal_photo">
-        <%= image_tag @deal.photo.url %>
-      </div>
-      
       <div class="buy_count_down">
         <%= image_tag 'buy-this-deal.png' %>
         <div class="height80">
@@ -32,6 +28,10 @@
         <%= render :partial => 'countdown' %>
         <br />
       </div>
+    </div>
+    
+    <div class="deal_photo">
+      <%= image_tag @deal.photo.url %>
     </div>
     
     <div class="deal_details_div readable">
