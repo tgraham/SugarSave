@@ -166,6 +166,7 @@ table.deal_details_table {
   width: 300px;
   padding-top: 20px;
   clear: left;
+  line-height: 1.2em;
 }
 
 .deal_details_div p, .good_stuff_div p, .blurb_div p, .company_div p {
@@ -176,6 +177,7 @@ table.deal_details_table {
   float: right;
   width: 300px;
   padding-top: 20px;
+  line-height: 1.2em;
 }
 
 .blurb_div {
@@ -196,7 +198,7 @@ table.deal_details_table {
 }
 
 .sugarbucks {
-  font-size: .8em;
+  font-size: .85em;
   line-height: 1em;
 }
 

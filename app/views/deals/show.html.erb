@@ -34,7 +34,7 @@
       <%= image_tag @deal.photo.url %>
     </div>
     
-    <div class="deal_details_div readable">
+    <div class="deal_details_div">
       <p><strong>Crucial Deal Details</strong></p>
       <ul class="details">
       <% for fine_print in @deal.fine_prints %>
@@ -43,7 +43,7 @@
       </ul>
     </div>
     
-    <div class="good_stuff_div readable">
+    <div class="good_stuff_div">
       <p><strong>The Good Stuff</strong></p>
       <ul class="details">
       <% for highlight in @deal.highlights %>
