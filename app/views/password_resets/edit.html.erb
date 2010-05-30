@@ -1,0 +1,10 @@
+<% title "Change My Password" %>
+
+<% semantic_form_for @user, :html => {:class => "pretty_form"}, :url => password_reset_path, :method => :put do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+  <% end %>
+  
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+<% end %>

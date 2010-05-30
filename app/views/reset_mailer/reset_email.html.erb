@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Password reset instructions requested for <%= @user.first_name+' '+@user.last_name %></h1>
+    <p>
+      We have received a request to reset your password for SugarSave.com,<br/>
+      if this request wasn't made by you, you can safely ignore this email.<br />
+      <br />
+      If you did request a password reset, please follow the link to login and reset your password.<br />
+      <br />
+      If the URL does not work try copying and pasting it into your browser.<br />
+      If you continue to have problem please feel free to contact us.
+    </p>
+    <p>
+      To reset your password, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks, and have a sweet day!<br />
+      <br />
+      The SugarSave Team</p>
+  </body>
+</html>

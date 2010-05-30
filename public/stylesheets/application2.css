@@ -384,3 +384,7 @@ table.deal_details_table {
 .readable {
   line-height: 1.5em;
 }
+
+.centered {
+  text-align: center;
+}

@@ -45,5 +45,8 @@ module Sugar
     
     # Paperclip fix
     Paperclip::Railtie.insert
+    
+    # Setting Mailer host param
+    config.action_mailer.default_url_options = { :host => Rails.env == "production" ? 'sugarsave.com' : 'localhost:3000' }
   end
 end

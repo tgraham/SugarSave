@@ -1,0 +1,17 @@
+<% title "Reset Password" %>
+
+<p class="centered">Fill out the form below and instructions to reset your password will be emailed to you:</p>
+
+<br />
+<br />
+
+<%= form_tag password_resets_path, :class => "pretty_form" do |f| %>
+  <label>Email:</label><br />
+  <%= text_field_tag "email" %><br />
+  <br />
+  
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+  <br />
+  <br />
+  <%= link_to "Nah, I remember... Let me sign in.", '/login' %>
+<% end %>

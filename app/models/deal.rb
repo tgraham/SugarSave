@@ -6,6 +6,7 @@ class Deal < ActiveRecord::Base
   attr_accessible :name, :blurb, :blurb_title, :regular_price, :initial_discount, :max_discount, :max_threshold, 
                   :deal_date, :city_id, :company_id, :approved, :fine_prints_attributes, :highlights_attributes,
                   :photo, :photo_file_name
+                  
   belongs_to :company
   belongs_to :city
   

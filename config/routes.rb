@@ -7,6 +7,7 @@ Sugar::Application.routes.draw do |map|
   match '/login', :to => 'user_sessions#new', :as => :login
   match '/logout', :to => 'user_sessions#destroy', :as => :logout
   match '/register', :to => 'users#new', :as => :register
+  match '/reset', :to => 'password_resets#new', :as => :reset
   
   match '/dashboard', :to => 'static#dashboard', :as => :admin
   match '/coming_soon', :to => 'static#coming_soon'
@@ -15,7 +16,7 @@ Sugar::Application.routes.draw do |map|
   match '/legal', :to => 'static#legal'
   match '/faq', :to => 'static#faq'
   
-  resources :users, :user_sessions, :companies, :charities, :deals, :cities
+  resources :users, :user_sessions, :companies, :charities, :deals, :cities, :password_resets
   
   root :to => 'static#index'
   

@@ -4,7 +4,8 @@ class WelcomeMailer < ActionMailer::Base
   def welcome_email(user)
     @user = user
     @url  = "http://sugarsave.com/login"
-    mail(:to => user.email,
-         :subject => "Welcome to SugarSave")
+    mail( :from => "SugarSave",
+          :to => user.email,
+          :subject => "Welcome to SugarSave")
   end
 end
