@@ -79,8 +79,10 @@
   <div id="side_bar">
     <div id="social">
       <%= image_tag 'share.png' %>
-      <%= link_to(image_tag('facebook-sq.png', :width => 40),  "http://facebook.com/share.php?u=http://sugarsave.com/#{@deal.city.search_name}/&t=#{@deal.blurb_title}", :target => :blank) %>
-      <%= image_tag 'twitter-sq.png', :width => 40 %>
+      <%= link_to(image_tag('facebook-sq.png', :width => 40),
+      "http://facebook.com/share.php?u=http://sugarsave.com/#{@deal.city.search_name}/&t=#{@deal.blurb_title}", :target => :blank) %>
+      <%= link_to(image_tag('twitter-sq.png', :width => 40),
+      "http://twitter.com/home?status=SugarSaveKnox - #{@deal.blurb_title}", :target => :blank) %>
       <%= image_tag 'email-sq.png', :width => 40 %>
     </div>
     <hr />
