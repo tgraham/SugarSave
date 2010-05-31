@@ -21,6 +21,14 @@ $(function() {
         superscript : { visible : false },
         insertImage : { visible : false }
       }
-        });
+  });
+  
+  $("#charity_description").wysiwyg({
+      controls: {
+        subscript   : { visible : false },
+        superscript : { visible : false },
+        insertImage : { visible : false }
+      }
+  });
     
 });

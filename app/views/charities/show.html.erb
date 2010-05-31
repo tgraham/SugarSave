@@ -6,7 +6,7 @@
     <br />
     <div class="float_left"><%= image_tag @charity.photo.url %></div>
     <br />
-    <p><%= @charity.description %></p>
+    <p><%=raw @charity.description %></p>
     <br />
     <% if current_user.try(:role) == 'admin' %>
       <p>
