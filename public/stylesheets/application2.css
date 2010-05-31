@@ -234,6 +234,21 @@ table.deal_details_table {
   padding-top: 15px;
 }
 
+.tweet_image {
+  float: left;
+  padding: 4px;
+}
+
+.tweet_image img {
+  width: 30px;
+}
+
+.tweet_text {
+  margin-left: 40px;
+  font-size: .85em;
+  line-height: 1.2em;
+}
+
 /* Show */
 #show {
   padding-left: 40px;

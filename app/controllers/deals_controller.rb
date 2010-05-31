@@ -13,6 +13,7 @@ class DealsController < ApplicationController
       
       @deal = Deal.where('city_id = ?', city).where('deal_date = ?', today).where('approved = ?', true).includes(:city).last
       @charity = Charity.where('city_id = ?', city).where('start_date <= ? and end_date >= ?', today, today).includes(:city).last
+      @tweets = Twitter::Search.new('SugarSaveKnox').per_page(4)
       
       if city.count == 0
         # Need to redirect to form so user can request a city

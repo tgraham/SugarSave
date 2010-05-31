@@ -90,5 +90,21 @@
       <p class="charitable_blurb">*Each week SugarSave features one local charity. We spread the word about their good works and donate a portion of SugarDeal sales to their cause. Sweet!</p>
     </div>
     <hr />
+    <div id="tweets">
+      <br />
+      <h1 class="centered">SugarSave Buzz</h1>
+      <% for tweet in @tweets %>
+        <br />
+        <div class="tweet_image"><%= image_tag(tweet.profile_image_url) %></div>
+        <div class="tweet_text"><%= link_to tweet.from_user, "http://twitter.com/#{tweet.from_user}" %> <%= tweet.text %>
+          <br />
+          <%= time_ago_in_words(tweet.created_at) %>
+        </div>
+      <% end %>
+    </div>
+    <br />
+    <div id="fb_like">
+      <%= render :partial => 'fb_like' %>
+    </div>
   </div>
 </div>

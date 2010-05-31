@@ -18,3 +18,4 @@ gem 'formtastic',       :git => "git://github.com/justinfrench/formtastic.git", 
 gem 'paperclip',        :git => 'git://github.com/thoughtbot/paperclip.git',      :branch => 'rails3'
 gem 'gravtastic'
 gem 'newrelic_rpm', :require => false
+gem 'twitter'
