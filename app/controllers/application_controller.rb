@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user_session, :current_user
+  helper_method :current_user_session, :current_user, :require_no_user
   
   protect_from_forgery
   layout 'application'
@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
     
     def require_no_user
       if current_user
-        store_location
         flash[:notice] = "You must be logged out to access this page"
         if current_user.try(:role) == 'admin'
           redirect_to users_path
@@ -33,7 +32,4 @@ class ApplicationController < ActionController::Base
       end
     end
     
-    def store_location
-      session[:return_to] = request.request_uri
-    end
 end

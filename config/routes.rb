@@ -15,6 +15,7 @@ Sugar::Application.routes.draw do |map|
   match '/sugarbucks', :to => 'static#sugarbucks'
   match '/legal', :to => 'static#legal'
   match '/faq', :to => 'static#faq'
+  match '/picker', :to => 'cities#picker'
   
   resources :users, :user_sessions, :companies, :charities, :deals, :cities, :password_resets
   

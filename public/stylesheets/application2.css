@@ -77,6 +77,15 @@ hr {
   text-decoration: none;
 }
 
+#logo .picker {
+  padding-top: 3px;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: .07em;
+  font-weight: normal;
+}
+
 #topnav {
   float: right;
 }
