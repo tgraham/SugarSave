@@ -93,20 +93,11 @@
     </div>
     <hr />
     <div id="tweets">
-      <br />
-      <h1 class="centered">SugarSave Buzz</h1>
-      <% for tweet in @tweets %>
-        <br />
-        <div class="tweet_image"><%= image_tag(tweet.profile_image_url) %></div>
-        <div class="tweet_text"><%= link_to tweet.from_user, "http://twitter.com/#{tweet.from_user}" %> <%= tweet.text %>
-          <br />
-          <%= time_ago_in_words(tweet.created_at) %>
-        </div>
-      <% end %>
+      <%= render :partial => 'shared/tweets' %>
     </div>
     <br />
     <div id="fb_like">
-      <%= render :partial => 'fb_like' %>
+      <%= render :partial => 'shared/fb_like' %>
     </div>
   </div>
 </div>

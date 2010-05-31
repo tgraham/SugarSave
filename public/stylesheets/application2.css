@@ -109,7 +109,7 @@ hr {
 }
 
 /* Deal Presentation Screen */
-#show_deal {
+#show_deal, #show_charity {
   float: left;
   width: 70%;
 }

@@ -13,6 +13,7 @@ class Ability
         can :read, :all
       else
         can :view, Deal
+        can :view, Charity
         can :create, User
         can [:show, :edit, :update], User do |current_user|
           user.id == current_user.id || user.role == "admin"

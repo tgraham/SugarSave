@@ -1,19 +1,29 @@
 <% title "Charity" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @charity.name %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @charity.description %>
-</p>
-<p>
-  <%= image_tag @charity.photo.url %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_charity_path(@charity) %> |
-  <%= link_to "Destroy", @charity, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", charities_path %>
-</p>
+<div id="boxed">
+  <div id="show_charity">
+    <h1><%= @charity.name %></h1>
+    <br />
+    <div class="float_left"><%= image_tag @charity.photo.url %></div>
+    <br />
+    <p><%= @charity.description %></p>
+    <br />
+    <% if current_user.try(:role) == 'admin' %>
+      <p>
+      <%= link_to "Edit", edit_charity_path(@charity) %> |
+      <%= link_to "Destroy", @charity, :confirm => 'Are you sure?', :method => :delete %> |
+      <%= link_to "View All", charities_path %>
+      </p>
+    <% end %>
+  </div>
+  
+  <div id="side_bar">
+    <div id="tweets">
+      <%= render :partial => 'shared/tweets' %>
+    </div>
+    <br />
+    <div id="fb_like">
+      <%= render :partial => 'shared/fb_like' %>
+    </div>
+  </div>
+</div>

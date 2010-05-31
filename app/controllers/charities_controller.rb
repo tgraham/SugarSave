@@ -6,6 +6,7 @@ class CharitiesController < ApplicationController
   end
   
   def show
+    @tweets = Twitter::Search.new('SugarSaveKnox').per_page(4)
   end
   
   def new
