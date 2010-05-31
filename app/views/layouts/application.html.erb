@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title><%= yield(:title) || "SugarSave" %></title>
+    <title><%= "SugarSave - " + yield(:title) || "SugarSave" %></title>
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",
     'reset', 'application2', 'flash', 'countdown' %>

@@ -1,4 +1,4 @@
-<% title "Deal" %>
+<% title "#{@deal.city.name} - Today's SugarDeal: #{@deal.blurb_title}" %>
 
 <div id="boxed">
   <div id="show_deal">
@@ -40,6 +40,7 @@
       <% for fine_print in @deal.fine_prints %>
         <li><%= fine_print.description %></li>
       <% end %>
+        <li><%= link_to "SugarDeal FAQs", '/faq' %></li>
       </ul>
     </div>
     
