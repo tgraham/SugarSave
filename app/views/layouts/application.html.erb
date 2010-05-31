@@ -4,10 +4,10 @@
     <title><%= "SugarSave - " + yield(:title) || "SugarSave" %></title>
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",
-    'reset', 'application2', 'flash', 'countdown' %>
+    'reset', 'application2', 'flash', 'countdown', 'jquery.wysiwyg' %>
     <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
     "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js",
-    "application", "rails", "countdown" %>
+    'application', 'rails', 'countdown', 'jquery.wysiwyg' %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
