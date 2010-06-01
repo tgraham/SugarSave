@@ -77,6 +77,12 @@ hr {
   text-decoration: none;
 }
 
+#logo .city_link {
+  padding-left: 7px;
+  color: #404040;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+}
+
 #logo .picker {
   padding-top: 3px;
   padding-left: 15px;

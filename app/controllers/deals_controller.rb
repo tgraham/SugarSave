@@ -44,8 +44,11 @@ class DealsController < ApplicationController
   end
   
   def edit
-    5.times { @deal.fine_prints.build }
-    5.times { @deal.highlights.build }
+    deal_count = 5 - @deal.fine_prints.count
+    highlight_count = 5 - @deal.highlights.count
+    
+    deal_count.to_i.times { @deal.fine_prints.build }
+    highlight_count.to_i.times { @deal.highlights.build }
   end
   
   def update

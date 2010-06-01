@@ -2,7 +2,8 @@
   <div id="logonav">
     <div id="logo">
       <% if current_user.try(:role) == 'admin' %>
-        <%= link_to "SUGAR$AVE #{current_user.city.name}", '/dashboard' %>
+        <%= link_to "SUGAR$AVE", '/dashboard' %>
+        <%= link_to current_user.city.name, "/#{current_user.city.search_name}", :class => 'city_link' %>
       <% else %>
         <% if current_user %>
           <%= link_to "SUGAR$AVE #{current_user.city.name}", '/'+current_user.city.search_name %>

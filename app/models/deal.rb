@@ -16,6 +16,17 @@ class Deal < ActiveRecord::Base
   accepts_nested_attributes_for :fine_prints, :reject_if => lambda { |a| a[:description].blank? }
   accepts_nested_attributes_for :highlights, :reject_if => lambda { |a| a[:description].blank? }
   
+  after_update :remove_empty_fine_prints
+  after_update :remove_empty_highlights
+  
+  def remove_empty_fine_prints
+    fine_prints.delete fine_prints.select{ |fine_print| fine_print.description.blank?}
+  end
+  
+  def remove_empty_highlights
+    highlights.delete highlights.select{ |highlight| highlight.description.blank?}
+  end
+  
   def discount
     
   end
