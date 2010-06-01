@@ -19,5 +19,5 @@ $(function() {
         superscript : { visible : false },
         insertImage : { visible : false }
       }
-  });    
+  });
 });

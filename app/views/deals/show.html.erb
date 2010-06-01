@@ -102,3 +102,19 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+var dealDate = $('#deal_date_field').html();
+var dealDateArray = dealDate.split('-');
+
+$('#countdown_dashboard').countDown({
+  targetDate: {
+    'day':      ++dealDateArray[2],
+    'month':    dealDateArray[1],
+    'year':     dealDateArray[0],
+    'hour':     0,
+    'min':      0,
+    'sec':      0
+  }
+});
+</script>
