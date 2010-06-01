@@ -5,6 +5,7 @@
   <%= f.inputs do %>
     <%= f.input :username %>
     <%= f.input :password %>
+    <%= f.input :remember_me, :as => :boolean, :label => "Remember me for two weeks:" %>
   <% end %>
   
   <%= image_submit_tag 'signin.png', :class => 'signup' %>
