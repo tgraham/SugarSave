@@ -7,7 +7,7 @@
       <%= image_tag @deal.photo.url(:thumb) %>
     <% end %>
     <%= f.input :blurb_title %>
-    <%= f.input :blurb %>
+    <%= f.input :blurb, :input_html => { :class => 'wysiwyg' } %>
   <% end %>
   
   <p><label>Fine Print</label></p>
@@ -33,7 +33,7 @@
     <%= f.input :initial_discount %>
     <%= f.input :max_discount %>
     <%= f.input :max_threshold %>
-    <%= f.input :deal_date, :as => :string %>
+    <%= f.input :deal_date, :as => :string, :input_html => { :class => 'date_picker' } %>
     <% if current_user.role == 'admin' %>
       <%= f.input :approved %>
     <% end %>

@@ -11,24 +11,13 @@ $(function() {
     return false
   });
   
-  $("#deal_deal_date").datepicker();
-  $("#charity_start_date").datepicker();
-  $("#charity_end_date").datepicker();
+  $(".date_picker").datepicker();
   
-  $("#deal_blurb").wysiwyg({
+  $(".wysiwyg").wysiwyg({
       controls: {
         subscript   : { visible : false },
         superscript : { visible : false },
         insertImage : { visible : false }
       }
-  });
-  
-  $("#charity_description").wysiwyg({
-      controls: {
-        subscript   : { visible : false },
-        superscript : { visible : false },
-        insertImage : { visible : false }
-      }
-  });
-    
+  });    
 });

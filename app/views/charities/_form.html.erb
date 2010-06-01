@@ -6,10 +6,10 @@
       <br />
       <%= image_tag @charity.photo.url(:thumb) %>
     <% end %>
-    <%= f.input :description, :input_html => { :size => '40x6' } %>
+    <%= f.input :description, :input_html => { :size => '40x6', :class => 'wysiwyg' } %>
     <%= f.input :city, :collection => @cities, :group_by => :state %>
-    <%= f.input :start_date, :as => :string, :label => "Start Date" %>
-    <%= f.input :end_date, :as => :string, :label => "End Date" %>
+    <%= f.input :start_date, :as => :string, :label => "Start Date", :input_html => { :class => 'date_picker' } %>
+    <%= f.input :end_date, :as => :string, :label => "End Date", :input_html => { :class => 'date_picker' } %>
   <% end %>
   <%= image_submit_tag 'submit.png', :class => 'signup' %>
 <% end %>
