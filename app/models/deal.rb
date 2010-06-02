@@ -28,7 +28,7 @@ class Deal < ActiveRecord::Base
   end
   
   def order_count
-    counted = 300
+    counted = 1
     counted < self.max_threshold ? counted : self.max_threshold
   end
   
@@ -51,9 +51,7 @@ class Deal < ActiveRecord::Base
   end
   
   def discount_percent
-    discount = ((1-(self.current_price/self.regular_price.to_f))*100).round(2)
-    discount = discount.to_i if discount == discount.to_i
-    discount
+    (1-(self.current_price/self.regular_price.to_f))*100
   end
   
   def savings

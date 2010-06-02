@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base  
   helper_method :current_user_session, :current_user, :require_no_user
   
   protect_from_forgery

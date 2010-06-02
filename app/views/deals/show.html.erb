@@ -14,10 +14,10 @@
           <table class="deal_details_table">
               <th>Value</th><th>Price</th><th>Discount</th><th>Savings</th>
               <tr>
-                <td>$<%= @deal.regular_price %></td>
-                <td>$<%= @deal.current_price %></td>
-                <td><%= @deal.discount_percent %>%</td>
-                <td>$<%= @deal.savings %></td>
+                <td><%= number_to_currency(@deal.regular_price, :precision => 2) %></td>
+                <td><%= number_to_currency(@deal.current_price, :precision => 2) %></td>
+                <td><%= number_to_percentage(@deal.discount_percent, :precision => 2) %></td>
+                <td><%= number_to_currency(@deal.savings, :precision => 2) %></td>
               </tr>
           </table>
         </div>
