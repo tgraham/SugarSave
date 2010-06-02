@@ -11,11 +11,12 @@
   <% for deal in @deals %>
     <tr>
       <td><%= link_to truncate_on(deal.name), edit_deal_path(deal) %></td>
-      <td><%= truncate_on(deal.blurb) %></td>
-      <td>$<%= deal.regular_price %></td>
+      <td><%=raw truncate_on(deal.blurb) %></td>
+      <td><%= number_to_currency(deal.regular_price) %></td>
       <td><%= deal.initial_discount %>% => <%= deal.max_discount %>%</td>
       <td><%= deal.max_threshold %> buys</td>
       <td><%= link_to "Delete", deal, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Preview", "/deal/#{deal.id}" %></td>
     </tr>
   <% end %>
 </table>

@@ -29,6 +29,18 @@ class DealsController < ApplicationController
     end
   end
   
+  def preview
+    if params[:id]
+      today = Date.current.strftime("%Y-%m-%d").to_s
+      
+      @deal = Deal.where('id = ?', params[:id]).includes(:city).last
+      @charity = Charity.where('start_date <= ? and end_date >= ?', today, today).includes(:city).last
+      @tweets = Twitter::Search.new('SugarSaveKnox').per_page(4)
+    end
+      
+    render :show
+  end
+  
   def new
     5.times { @deal.fine_prints.build }
     5.times { @deal.highlights.build }
