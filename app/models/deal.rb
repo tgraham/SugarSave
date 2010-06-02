@@ -27,11 +27,38 @@ class Deal < ActiveRecord::Base
     highlights.delete highlights.select{ |highlight| highlight.description.blank?}
   end
   
-  def discount
-    
+  def order_count
+    counted = 300
+    counted < self.max_threshold ? counted : self.max_threshold
+  end
+  
+  def initial_discount_price
+    self.regular_price-(self.regular_price*(self.initial_discount.to_f/100))
+  end
+  
+  def max_discount_price
+    self.regular_price-(self.regular_price*(self.max_discount.to_f/100))
+  end
+  
+  def each_discount
+    (self.initial_discount_price-self.max_discount_price)/self.max_threshold
+  end
+  
+  def current_price
+    price = self.initial_discount_price-(self.order_count*self.each_discount).round(2)
+    price = price.to_i if price == price.to_i
+    price
+  end
+  
+  def discount_percent
+    discount = ((1-(self.current_price/self.regular_price.to_f))*100).round(2)
+    discount = discount.to_i if discount == discount.to_i
+    discount
   end
   
   def savings
-    
+    saved = (self.regular_price.to_f-self.current_price).round(2)
+    saved = saved.to_i if saved == saved.to_i
+    saved
   end
 end

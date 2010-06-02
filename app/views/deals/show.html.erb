@@ -12,10 +12,11 @@
         <%= image_tag 'buy-this-deal.png' %>
         <div class="height80">
           <table class="deal_details_table">
-              <th>Value</th><th>Discount</th><th>Savings</th>
+              <th>Value</th><th>Price</th><th>Discount</th><th>Savings</th>
               <tr>
                 <td>$<%= @deal.regular_price %></td>
-                <td><%= @deal.discount %>%</td>
+                <td>$<%= @deal.current_price %></td>
+                <td><%= @deal.discount_percent %>%</td>
                 <td>$<%= @deal.savings %></td>
               </tr>
           </table>
