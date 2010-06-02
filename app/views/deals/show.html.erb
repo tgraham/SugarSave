@@ -102,9 +102,11 @@
       <%= render :partial => 'shared/fb_like' %>
     </div>
   </div>
+  
   <% if current_user.try(:role) == 'admin' %>
     <p><%= link_to "Edit", edit_deal_path(@deal) %></p>
   <% end %>
+  
 </div>
 
 <script type="text/javascript">
