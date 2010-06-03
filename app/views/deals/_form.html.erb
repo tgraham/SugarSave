@@ -33,6 +33,7 @@
     <%= f.input :initial_discount %>
     <%= f.input :max_discount %>
     <%= f.input :max_threshold %>
+    <%= f.input :weekend, :as => :boolean %>
     <%= f.input :deal_date, :as => :string, :input_html => { :class => 'date_picker' } %>
     <% if current_user.role == 'admin' %>
       <%= f.input :approved %>

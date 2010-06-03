@@ -24,7 +24,7 @@
         
         <div class="time_to_buy">TIME LEFT TO BUY</div>
         
-        <div id='deal_date_field'><%= @deal.deal_date %></div>
+        <div id='deal_date_field'><%= @deal.weekend? ? @deal.deal_date + 3 : @deal.deal_date + 1 %></div>
         <br />
         <%= render :partial => 'countdown' %>
         <br />
@@ -115,7 +115,7 @@ var dealDateArray = dealDate.split('-');
 
 $('#countdown_dashboard').countDown({
   targetDate: {
-    'day':      ++dealDateArray[2],
+    'day':      dealDateArray[2],
     'month':    dealDateArray[1],
     'year':     dealDateArray[0],
     'hour':     0,
