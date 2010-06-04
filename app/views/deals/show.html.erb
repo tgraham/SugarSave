@@ -11,21 +11,13 @@
       <div class="buy_count_down">
         <%= image_tag 'buy-this-deal.png' %>
         <div class="height80">
-          <table class="deal_details_table">
-              <th>Value</th><th>Price</th><th>Discount</th><th>Savings</th>
-              <tr>
-                <td><%= number_to_currency(@deal.regular_price, :precision => 2) %></td>
-                <td><%= number_to_currency(@deal.current_price, :precision => 2) %></td>
-                <td><%= number_to_percentage(@deal.discount_percent, :precision => 2) %></td>
-                <td><%= number_to_currency(@deal.savings, :precision => 2) %></td>
-              </tr>
-          </table>
+          <%= render :partial => @deal.deal_type.downcase %>
         </div>
         
         <div class="time_to_buy">TIME LEFT TO BUY</div>
         
         <div id='deal_date_field'><%= @deal.weekend? ? @deal.deal_date + 3 : @deal.deal_date + 1 %></div>
-        <br />
+
         <%= render :partial => 'countdown' %>
         <br />
       </div>
@@ -104,7 +96,7 @@
   </div>
   
   <% if current_user.try(:role) == 'admin' %>
-    <p><%= link_to "Edit", edit_deal_path(@deal) %></p>
+    <p class="left"><%= link_to "Edit", edit_deal_path(@deal) %></p>
   <% end %>
   
 </div>

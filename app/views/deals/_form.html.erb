@@ -29,10 +29,12 @@
   <%= f.inputs do %>
     <%= f.input :company, :collection => @companies %>
     <%= f.input :city, :collection => @cities, :group_by => :state %>
-    <%= f.input :regular_price %>
-    <%= f.input :initial_discount %>
-    <%= f.input :max_discount %>
-    <%= f.input :max_threshold %>
+    <%= f.input :deal_type, :collection => Deal::DEAL_TYPE %>
+    <%= f.input :regular_price, :label => 'Price' %>
+    <%= f.input :initial_discount, :label => 'Discount' %>
+    <%= f.input :max_discount, :label => 'Max Discount' %>
+    <%= f.input :max_threshold, :label => 'Max Threashold' %>
+    <%= f.input :tipping_point, :label => 'Tipping Point' %>
     <%= f.input :weekend, :as => :boolean %>
     <%= f.input :deal_date, :as => :string, :input_html => { :class => 'date_picker' } %>
     <% if current_user.role == 'admin' %>

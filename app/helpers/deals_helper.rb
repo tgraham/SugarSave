@@ -1,2 +1,2 @@
-module DealsHelper
+module DealsHelper  
 end

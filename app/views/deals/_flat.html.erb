@@ -1,0 +1,8 @@
+<table class="deal_details_table">
+    <th>Value</th><th>Discount</th><th>Savings</th>
+    <tr>
+      <td><%= number_to_currency(@deal.regular_price, :precision => 2) %></td>
+      <td><%= number_to_percentage(@deal.initial_discount, :precision => 2) %></td>
+      <td><%= number_to_currency(@deal.flat_savings, :precision => 2) %></td>
+    </tr>
+</table>

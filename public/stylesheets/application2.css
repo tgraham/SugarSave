@@ -108,7 +108,6 @@ hr {
 #content {
   padding: 95px 0px;
   min-height: 300px;
-/*  overflow: auto;*/
 }
 
 #boxed {
@@ -154,8 +153,11 @@ hr {
 }
 
 .time_to_buy {
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-weight: bolder;
   text-align: center;
+  margin: 10px;
+  color: #555;
 }
 
 .height80 {
@@ -172,8 +174,9 @@ table.deal_details_table {
   width: 33%;
 }
 
-#deal_date_field {
+#deal_date_field, #ordered_percent {
   visibility: hidden;
+  height: 0px;
 }
 
 .deal_details_div {
@@ -336,7 +339,7 @@ table.deal_details_table {
   padding: 10px 0 5px;
 }
 
-.pretty_form input[type=text], .pretty_form input[type=password], .pretty_form input[type=checkbox], .pretty_form select {
+.pretty_form input[type=text], .pretty_form input[type=password], .pretty_form select {
   font: 13px 'Lucida Grande',Helvetica,Arial,sans-serif;
   outline: 0 none;
   padding: 7px;
@@ -417,4 +420,18 @@ table.deal_details_table {
 
 .centered {
   text-align: center;
+}
+
+.left {
+  clear: both;
+  float: left;
+  text-align: left;
+}
+
+/* Progress bar */
+
+.ui-progressbar {
+  margin: 10px auto;
+  height: 1.2em;
+  width: 60%;
 }
