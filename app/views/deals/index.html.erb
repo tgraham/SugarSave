@@ -17,7 +17,7 @@
       <% unless deal.max_discount.blank? %>
         => <%= deal.max_discount %>%
        <% end %></td>
-      <td><%= deal.max_threshold %> buys</td>
+      <td><%= deal.max_threshold %></td>
       <td><%= link_to "Delete", deal, :confirm => 'Are you sure?', :method => :delete %></td>
       <td><%= link_to "Preview", "/deal/#{deal.id}" %></td>
     </tr>
