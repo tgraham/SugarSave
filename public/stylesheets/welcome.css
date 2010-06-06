@@ -13,6 +13,14 @@ body {
   font-size: 14px;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+hr {
+  color: #888;
+}
+
 a img {
   border: none;
 }
@@ -119,4 +127,9 @@ a {
 #connect p {
   padding-bottom: 4px;
   font-size: 1.2em;
+}
+
+/* Misc */
+.centered {
+  text-align: center;
 }

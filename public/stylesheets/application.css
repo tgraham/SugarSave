@@ -8,12 +8,12 @@ html, body {
 }
 
 body {
-  background-color: #3676B5 /* #4B7399 */;
+  background: #fff;
   font-family: Helvetica, Arial;
   font-size: 14px;
 }
 
-a img {
+img {
   border: none;
 }
 
@@ -22,17 +22,49 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+hr {
+  color: #888;
+}
+
+#topfade {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#topfade img {
+  width: 100%;
+  padding-top: 57px;
+}
+
 #container {
   width: 960px;
   margin: 0 auto;
-  overflow: auto;
+  /* overflow: auto; */
   min-height: 100%;
 }
 
+#top {
+  background: #3676B5;
+  height: 55px;
+  margin-bottom: -57px;
+  z-index: 1;
+  border-bottom: 2px solid gray;
+}
+
 #logonav {
-	background: url('../images/header.gif') no-repeat;
-	height: 40px;
-	padding: 12px 20px 32px 20px;
+  width: 960px;
+	padding: 20px 20px 0px;
+	margin: 0 auto;
 }
 
 #logo a {
@@ -45,20 +77,194 @@ a {
   text-decoration: none;
 }
 
+#logo .city_link {
+  padding-left: 7px;
+  color: #404040;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+}
+
+#logo .picker {
+  padding-top: 3px;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: .07em;
+  font-weight: normal;
+}
+
 #topnav {
   float: right;
 }
 
+#topnav a {
+  color: #fff;
+}
+
+#topnav img {
+  margin-top: -5px;
+  vertical-align: middle;
+}
+
 #content {
-	padding: 40px 0px 45px 0px;
-	background-color: #fff;
-	min-height: 300px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;	
-	-webkit-box-shadow: 2px 2px 5px #555;
-	-moz-box-shadow: 2px 2px 5px #555;
-	overflow: auto;
-	clear: both;
+  padding: 95px 0px;
+  min-height: 300px;
+}
+
+#boxed {
+  padding: 15px;
+  background-color: #fff;
+  min-height: 300px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
+  -webkit-box-shadow: 2px 2px 5px #555;
+  -moz-box-shadow: 2px 2px 5px #555;
+  overflow: auto;
+  clear: both;
+}
+
+/* Deal Presentation Screen */
+#show_deal, #show_charity {
+  float: left;
+  width: 70%;
+}
+
+.deal_name {
+  font-size: 2.5em;
+  color: #00107A;
+  padding-bottom: 15px;
+}
+
+#deal_action {
+  float: left;
+  padding-top: 15px;
+  width: 300px;
+}
+
+.deal_photo {
+  float: right;
+  padding: 15px 10px;
+  width: 320px;
+  text-align: right;
+}
+
+.buy_count_down {
+  width: 300px;
+  text-align: center;
+}
+
+.time_to_buy {
+  font-size: 1.7em;
+  font-weight: bolder;
+  text-align: center;
+  margin: 10px;
+  color: #555;
+}
+
+.height80 {
+  padding-top: 20px;
+  min-height: 80px;
+}
+
+table.deal_details_table {
+  width: 100%;
+}
+
+.deal_details_table td {
+  text-align: center;
+  width: 33%;
+}
+
+#deal_date_field, #ordered_percent {
+  visibility: hidden;
+  height: 0px;
+}
+
+.deal_details_div {
+  float: left;
+  width: 300px;
+  padding-top: 20px;
+  clear: left;
+  line-height: 1.2em;
+}
+
+.deal_details_div p, .good_stuff_div p, .blurb_div p, .company_div p {
+  font-size: 1.2em;
+}
+
+.good_stuff_div {
+  float: right;
+  width: 300px;
+  padding-top: 20px;
+  line-height: 1.2em;
+}
+
+.blurb_div {
+  width: 400px;
+  float: left;
+  padding-top: 20px;
+}
+
+.company_div {
+  width: 200px;
+  float: right;
+  padding-top: 20px;
+}
+
+.details {
+  list-style-type: circle;
+  padding: 10px 0px 10px 25px;
+}
+
+.sugarbucks {
+  font-size: .85em;
+  line-height: 1em;
+}
+
+#side_bar {
+  padding: 2px;
+  float: right;
+  border-left: 1px solid #888;
+  min-height: 300px;
+  width: 29%;
+}
+
+#social {
+  text-align: right;
+  padding-bottom: 15px;
+}
+
+#charitable {
+  padding: 15px 0 15px 10px;
+}
+
+#charitable img {
+  float: right;
+  padding: 5px;
+}
+
+.charitable_title {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.charitable_blurb {
+  font-size: .8em;
+  padding-top: 15px;
+}
+
+.tweet_image {
+  float: left;
+  padding: 4px;
+}
+
+.tweet_image img {
+  width: 30px;
+}
+
+.tweet_text {
+  margin-left: 40px;
+  font-size: .85em;
+  line-height: 1.2em;
 }
 
 /* Show */
@@ -71,28 +277,42 @@ a {
   font-size: 1.2em;
 }
 
-/* Tables */
-#companylist {
-  margin: 0 auto;
+#show span {
+  padding-left: 40px;
 }
 
-#companylist th {
+/* Tables */
+#tablelist {
+  margin: 20px auto;
+}
+
+#tablelist th {
   text-decoration: underline;
   font-size: 1.2em;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
-#companylist td {
+#tablelist td {
   padding: 5px 10px;
+  font-size: .85em;
+  text-align: center;
 }
 
 .links {
   padding: 10px 0 10px 40px;
 }
 
+#adminlinks {
+  border: 1px solid #888;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  padding: 10px;
+}
+
 /* Forms */
 .normal_form {
-  padding-left: 40px;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .normal_form input[type=text], .normal_form textarea {
@@ -106,6 +326,9 @@ a {
   width: 480px;
 }
 
+.normal_form input[type=checkbox] {
+  padding-right: 7px;
+}
 
 /* Pretty Form */
 .pretty_form label, .normal_form label {
@@ -116,7 +339,7 @@ a {
   padding: 10px 0 5px;
 }
 
-.pretty_form input[type=text], .pretty_form input[type=password], .pretty_form input[type=checkbox], .pretty_form select {
+.pretty_form input[type=text], .pretty_form input[type=password], .pretty_form select {
   font: 13px 'Lucida Grande',Helvetica,Arial,sans-serif;
   outline: 0 none;
   padding: 7px;
@@ -189,4 +412,30 @@ a {
 #connect p {
   padding-bottom: 4px;
   font-size: 1.2em;
+}
+
+.readable {
+  line-height: 1.5em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.left {
+  clear: both;
+  float: left;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Progress bar */
+
+.ui-progressbar {
+  margin: 10px auto;
+  height: 1.2em;
+  width: 60%;
 }

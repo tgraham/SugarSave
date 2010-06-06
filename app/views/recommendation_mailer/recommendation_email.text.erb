@@ -1,0 +1,11 @@
+<%= @recommendation.subject %>
+===============================================
+
+<%= @recommendation.name %> thought you might like to check out today's sweet deal!
+If you'd like to check it out, <%= link_to "click here", "http://sugarsave.com/"+@recommendation.deal.city.search_name %>.
+
+<%=raw @recommendation.message %>
+
+<%=raw @recommendation.deal.blurb_title %>
+
+<%=raw @recommendation.deal.blurb %>

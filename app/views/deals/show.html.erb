@@ -77,7 +77,8 @@
       "http://facebook.com/share.php?u=http://sugarsave.com/#{@deal.city.search_name}/&t=#{@deal.blurb_title}", :target => :blank) %>
       <%= link_to(image_tag('twitter-sq.png', :width => 40),
       "http://twitter.com/home?status=SugarSaveKnox - #{@deal.blurb_title}", :target => :blank) %>
-      <%= image_tag 'email-sq.png', :width => 40 %>
+      <%= link_to(image_tag('email-sq.png', :width => 40),
+      new_recommendation_path(:deal => @deal.id)) %>
     </div>
     <hr />
     <div id="charitable">

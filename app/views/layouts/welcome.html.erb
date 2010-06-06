@@ -3,8 +3,8 @@
   <head>
     <title><%= yield(:title) || "SugarSave" %></title>
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <%= stylesheet_link_tag 'reset', 'welcome', 'flash' %>
-    <%= javascript_include_tag 'jquery', 'welcome' %>
+    <%= stylesheet_link_tag 'reset', 'welcome', 'flash', 'facebox' %>
+    <%= javascript_include_tag 'jquery', 'welcome', 'facebox' %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
@@ -17,7 +17,7 @@
           <% else %>
             <a href="/">SUGAR<font color="green">$</font>AVE</a>
           <% end %>
-          <%= link_to "Choose a City", '/picker', :class => 'picker' %>
+          <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
         </div>
         <div id="topnav">
           <% if current_user %>
@@ -39,5 +39,12 @@
       </div>
     </div>
     <%= render :partial => '/layouts/footer' %>
+    
+    <div id="city_picker" style="display: none;">
+      <h1 class="centered">Pick Your City</h1>
+      <hr />
+      <br />
+      <%= render :partial => '/shared/city_list' %>
+    </div>
   </body>
 </html>

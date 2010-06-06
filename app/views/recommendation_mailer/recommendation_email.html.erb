@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= @recommendation.subject %></h1>
+    <p>
+      <%= @recommendation.name %> thought you might like to check out today's sweet deal!
+      If you'd like to check it out, <%= link_to "click here", "http://sugarsave.com/"+@recommendation.deal.city.search_name %>.
+      <br /><br />
+      <%=raw @recommendation.message %>
+      <br />
+      <h2><%=raw @recommendation.deal.blurb_title %></h2>
+      <%=raw @recommendation.deal.blurb %>
+    </p>
+  </body>
+</html>

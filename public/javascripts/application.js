@@ -11,6 +11,8 @@ $(function() {
     return false
   });
   
+  $('a[rel*=facebox]').facebox();
+  
   $(".date_picker").datepicker();
   
   $(".wysiwyg").wysiwyg({

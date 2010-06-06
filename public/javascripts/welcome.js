@@ -12,6 +12,8 @@ $(function() {
   	$(this).attr("src","../images/feature-business.png");
   });
   
+  $('a[rel*=facebox]').facebox();
+  
   $.each($('.hideable'), function() {
     $(this).append('<a href="#" class="hide-link">[X]</a>');
     $(this).delay(3000).fadeOut(1000);

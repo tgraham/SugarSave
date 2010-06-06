@@ -11,7 +11,7 @@
           <%= link_to "SUGAR$AVE", root_path %>
         <% end %>
       <% end %>
-      <%= link_to "Choose a City", '/picker', :class => 'picker' %>
+      <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
     </div>
     <div id="topnav">
       <% if current_user %>

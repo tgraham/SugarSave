@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100603023905) do
+ActiveRecord::Schema.define(:version => 20100606032910) do
 
   create_table "charities", :force => true do |t|
     t.string   "name"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20100603023905) do
     t.boolean  "weekend"
     t.string   "deal_type"
     t.integer  "tipping_point"
+    t.date     "end_date"
   end
 
   create_table "fine_prints", :force => true do |t|
@@ -73,6 +74,17 @@ ActiveRecord::Schema.define(:version => 20100603023905) do
     t.integer  "deal_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "recommendations", :force => true do |t|
+    t.string   "from_email"
+    t.string   "to_email"
+    t.string   "subject"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "deal_id"
+    t.string   "name"
   end
 
   create_table "states", :force => true do |t|

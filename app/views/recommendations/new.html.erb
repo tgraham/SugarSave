@@ -1,0 +1,28 @@
+<% title "Share the Sweetness!" %>
+
+<%= semantic_form_for(@recommendation, :html => { :class => 'normal_form' }) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :deal_id, :as => :hidden, :input_html => { :value => params[:deal] } %>
+    <% if current_user %>
+      <%= f.input :name, :as => :hidden, :input_html => { :value => current_user.first_name+' '+current_user.last_name } %>
+    <% else %>
+      <%= f.input :name, :label => 'Name' %>
+    <% end %>
+  
+    <% if current_user %>
+      <%= f.input :from_email, :as => :hidden, :input_html => { :value => current_user.email } %>
+    <% else %>
+      <%= f.input :from_email, :label => 'From Email' %>
+    <% end %>
+    
+    <%= f.input :to_email, :label => 'To Email' %>
+    
+    <%= f.input :subject, :input_html => { :value => "Today's SugarDeal: "+@deal.name } %>
+    
+    <%= f.input :message, :input_html => { :class => 'wysiwyg' } %>
+  <% end %>
+  
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+<% end %>
+
+

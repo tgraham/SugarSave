@@ -8,10 +8,6 @@ class CitiesController < ApplicationController
   def show
   end
   
-  def picker
-    @cities = City.includes(:state)
-  end
-  
   def new
   end
   

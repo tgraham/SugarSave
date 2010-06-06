@@ -1,4 +1,6 @@
 Sugar::Application.routes.draw do |map|
+  resources :recommendations
+
   resources :fine_prints
 
   resources :highlights

@@ -12,6 +12,7 @@ class Deal < ActiveRecord::Base
   
   has_many :fine_prints, :dependent => :destroy
   has_many :highlights, :dependent => :destroy
+  has_many :recommendations
   
   accepts_nested_attributes_for :fine_prints, :reject_if => lambda { |a| a[:description].blank? }
   accepts_nested_attributes_for :highlights, :reject_if => lambda { |a| a[:description].blank? }
