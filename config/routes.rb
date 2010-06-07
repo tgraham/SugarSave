@@ -1,9 +1,5 @@
 Sugar::Application.routes.draw do |map|
-  resources :recommendations
-
-  resources :fine_prints
-
-  resources :highlights
+  resources :locations
 
 
   match '/login', :to => 'user_sessions#new', :as => :login
@@ -17,11 +13,11 @@ Sugar::Application.routes.draw do |map|
   match '/sugarbucks', :to => 'static#sugarbucks'
   match '/legal', :to => 'static#legal'
   match '/faq', :to => 'static#faq'
-  match '/picker', :to => 'cities#picker'
+  match '/contact', :to => 'contacts#new'
   
   match '/deal/:id', :to => 'deals#preview'
   
-  resources :users, :user_sessions, :companies, :charities, :deals, :cities, :password_resets
+  resources :users, :user_sessions, :companies, :charities, :deals, :cities, :password_resets, :fine_prints, :highlights, :recommendations, :contacts
   
   root :to => 'static#index'
   

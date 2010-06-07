@@ -1,0 +1,10 @@
+<div id="boxed">
+  <%= semantic_form_for(@location, :html => { :class => "normal_form" }) do |f| %>
+    <%= f.inputs do %>
+      <%= f.input :name, :label => "City Name" %>
+      <%= f.input :zip_code, :label => "Zip Code" %>
+    <% end %>
+    
+    <%= image_submit_tag 'submit.png', :class => 'signup' %>
+  <% end %>
+</div>

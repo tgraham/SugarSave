@@ -15,6 +15,6 @@ class User < ActiveRecord::Base
   
   def deliver_reset_email!
     reset_perishable_token!
-    ResetMailer.reset_email(self).deliver
+    NotifierMailer.reset_email(self).deliver
   end
 end

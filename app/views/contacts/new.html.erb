@@ -1,0 +1,18 @@
+<% title "Let us know what's on your mind." %>
+
+<%= semantic_form_for(@contact, :html => { :class => 'normal_form' }) do |f| %>
+  <%= f.inputs do %>
+  
+    <% if current_user %>
+      <%= f.input :from_email, :as => :hidden, :input_html => { :value => current_user.email } %>
+    <% else %>
+      <%= f.input :from_email, :label => 'From Email' %>
+    <% end %>
+    
+    <%= f.input :message, :input_html => { :class => 'wysiwyg' } %>
+  <% end %>
+  
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+<% end %>
+
+

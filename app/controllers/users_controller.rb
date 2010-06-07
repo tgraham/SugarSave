@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   
   def create
     if @user.save
-      WelcomeMailer.welcome_email(@user).deliver
+      NotifierMailer.welcome_email(@user).deliver
       flash[:notice] = "Registration Successful."
       if current_user.try(:role) == 'admin'
         redirect_to users_path

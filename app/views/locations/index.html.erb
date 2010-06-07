@@ -1,0 +1,19 @@
+<% title "Locations" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Zip Code</th>
+  </tr>
+  <% for location in @locations %>
+    <tr>
+      <td><%= location.name %></td>
+      <td><%= location.zip_code %></td>
+      <td><%= link_to "Show", location %></td>
+      <td><%= link_to "Edit", edit_location_path(location) %></td>
+      <td><%= link_to "Destroy", location, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Location", new_location_path %></p>

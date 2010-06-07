@@ -16,6 +16,7 @@ class Ability
         can :view, Charity
         can [:picker], City
         can :create, User
+        can :create, Location
         can [:show, :edit, :update], User do |current_user|
           user.id == current_user.id || user.role == "admin"
         end

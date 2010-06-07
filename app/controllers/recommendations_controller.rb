@@ -7,7 +7,7 @@ class RecommendationsController < ApplicationController
   def create
     @recommendation = Recommendation.new(params[:recommendation])
     if @recommendation.save
-      RecommendationMailer.recommendation_email(@recommendation).deliver
+      NotifierMailer.recommendation_email(@recommendation).deliver
       flash[:notice] = "Successfully sent recommendation."
       redirect_to "/#{@recommendation.deal.city.search_name}"
     else
