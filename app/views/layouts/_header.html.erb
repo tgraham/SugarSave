@@ -11,13 +11,13 @@
           <%= link_to "SUGAR$AVE", root_path %>
         <% end %>
       <% end %>
-      <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
+      <% cache 'picker' do %>
+        <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
+      <% end %>
     </div>
     <div id="topnav">
       <% if current_user %>
-        <% cache 'gravatar' do %>
-          <%= image_tag current_user.gravatar_url(:rating => 'PG', :size => 30) %>
-        <% end %>
+        <%= image_tag current_user.gravatar_url(:rating => 'PG', :size => 30) %>
         <b><%= link_to current_user.first_name+' '+current_user.last_name, user_path(current_user) %></b> | <%= link_to "Sign Out", logout_path %>
       <% else %>
         <b><%= link_to "Sign Up", register_path %></b> or <%= link_to "Sign In", login_path %>

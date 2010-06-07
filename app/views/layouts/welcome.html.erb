@@ -17,7 +17,9 @@
           <% else %>
             <a href="/">SUGAR<font color="green">$</font>AVE</a>
           <% end %>
-          <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
+          <% cache 'picker' do %>
+            <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
+          <% end %>
         </div>
         <div id="topnav">
           <% if current_user %>
@@ -40,11 +42,6 @@
     </div>
     <%= render :partial => '/layouts/footer' %>
     
-    <div id="city_picker" style="display: none;">
-      <h1 class="centered">Pick Your City</h1>
-      <hr />
-      <br />
-      <%= render :partial => '/shared/city_list' %>
-    </div>
+    <%= render :partial => '/shared/picker' %>
   </body>
 </html>

@@ -265,6 +265,7 @@ table.deal_details_table {
   margin-left: 40px;
   font-size: .85em;
   line-height: 1.2em;
+  overflow: auto;
 }
 
 /* Show */
@@ -420,6 +421,10 @@ table.deal_details_table {
 
 .centered {
   text-align: center;
+}
+
+.larger {
+  font-size: 1.2em;
 }
 
 .left {

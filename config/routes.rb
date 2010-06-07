@@ -8,7 +8,6 @@ Sugar::Application.routes.draw do |map|
   match '/reset', :to => 'password_resets#new', :as => :reset
   
   match '/dashboard', :to => 'static#dashboard', :as => :admin
-  match '/coming_soon', :to => 'static#coming_soon'
   match '/about', :to => 'static#about'
   match '/sugarbucks', :to => 'static#sugarbucks'
   match '/legal', :to => 'static#legal'

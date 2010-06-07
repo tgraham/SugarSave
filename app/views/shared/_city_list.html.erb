@@ -1,7 +1,11 @@
 <% for city in $cities do %>
   <%= link_to city.name, "/#{city.search_name}" %>
 <% end %>
-<br /><br /><br />
+<br />
+<br />
+<br />
+
 <hr />
+
 <br />
 <%= link_to "Request SugarSave for your City.", new_location_path %>

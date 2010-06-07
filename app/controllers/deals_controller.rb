@@ -22,7 +22,7 @@ class DealsController < ApplicationController
       
       if @deal.nil?
         # Need to add custom deal mesage for city
-        return redirect_to '/coming_soon'
+        return render :coming_soon
       end
       
       @charity = Charity.where('city_id = ?', city).where('start_date <= ? and end_date >= ?', today, today).includes(:city).last
