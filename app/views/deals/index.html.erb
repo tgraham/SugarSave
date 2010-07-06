@@ -19,7 +19,7 @@
        <% end %></td>
       <td><%= deal.max_threshold %></td>
       <td><%= link_to "Delete", deal, :confirm => 'Are you sure?', :method => :delete %></td>
-      <td><%= link_to "Preview", "/deal/#{deal.id}" %></td>
+      <td><%= link_to "Preview", preview_deal_path(deal) %></td>
     </tr>
   <% end %>
 </table>

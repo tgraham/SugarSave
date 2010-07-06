@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100607030448) do
+ActiveRecord::Schema.define(:version => 20100608040221) do
 
   create_table "charities", :force => true do |t|
     t.string   "name"
@@ -76,9 +76,26 @@ ActiveRecord::Schema.define(:version => 20100607030448) do
     t.datetime "updated_at"
   end
 
+  create_table "invoices", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "transaction_id"
+    t.integer  "amount"
+    t.integer  "number"
+    t.boolean  "settled"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.integer  "zip_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payment_profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "payment_cim_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -101,6 +118,16 @@ ActiveRecord::Schema.define(:version => 20100607030448) do
     t.string   "abbreviation"
   end
 
+  create_table "transactions", :force => true do |t|
+    t.integer  "invoice_id"
+    t.string   "confirmation_id"
+    t.boolean  "error"
+    t.string   "error_code"
+    t.string   "error_message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
@@ -113,7 +140,9 @@ ActiveRecord::Schema.define(:version => 20100607030448) do
     t.integer  "city_id"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "perishable_token",  :default => "", :null => false
+    t.string   "perishable_token",   :default => "", :null => false
+    t.string   "customer_cim_id"
+    t.integer  "payment_profile_id"
   end
 
   add_index "users", ["perishable_token"], :name => "index_users_on_perishable_token"

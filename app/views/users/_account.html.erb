@@ -1,0 +1,9 @@
+<h1><%= image_tag @user.gravatar_url(:rating => 'PG', :size => 75) %> <%= @user.first_name+' '+@user.last_name %></h1>
+<br />
+<p><strong>Username:</strong> <%= @user.username %></p>
+<br />
+<p><strong>Email:</strong> <%= @user.email %></p>
+<br />
+<p><strong>City:</strong> <%= @user.city.name+', '+@user.city.state.abbreviation %></p>
+<br /><br />
+<%= link_to "Edit Your Profile", edit_user_path(@user) %>

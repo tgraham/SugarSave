@@ -1,6 +1,6 @@
 <% title "Edit Your Information" %>
 
-<%= semantic_form_for( @user, :html => { :class => "pretty_form" } ) do |f| %>
+<%= semantic_form_for( @user, :html => { :class => "normal_form" } ) do |f| %>
   <%= f.inputs do %>
     <%= f.input :first_name, :label => "First Name" %>
     <%= f.input :last_name, :label => "Last Name" %>

@@ -1,6 +1,4 @@
 Sugar::Application.routes.draw do |map|
-  resources :locations
-
 
   match '/login', :to => 'user_sessions#new', :as => :login
   match '/logout', :to => 'user_sessions#destroy', :as => :logout
@@ -14,9 +12,16 @@ Sugar::Application.routes.draw do |map|
   match '/faq', :to => 'static#faq'
   match '/contact', :to => 'contacts#new'
   
-  match '/deal/:id', :to => 'deals#preview'
+  resources :users, :user_sessions, :companies, :charities, :deals, :cities, :password_resets,
+            :fine_prints, :highlights, :recommendations, :contacts, :locations, :payment_profiles
+            
+  resources :user do
+    resources :payment_profile
+  end
   
-  resources :users, :user_sessions, :companies, :charities, :deals, :cities, :password_resets, :fine_prints, :highlights, :recommendations, :contacts
+  resources :deal do
+    get :preview, :on => :member
+  end
   
   root :to => 'static#index'
   

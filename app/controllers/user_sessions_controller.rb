@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Successfully Logged In."
-      if current_user.role == 'admin'
+      if current_user.role == 'admin' 
         redirect_to admin_url
       else
         redirect_to '/'+current_user.city.search_name

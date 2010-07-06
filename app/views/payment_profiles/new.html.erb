@@ -1,0 +1,20 @@
+<% title "Billing Information" %>
+
+<%= semantic_form_for([@user, @payment_profile], :html => { :class => 'normal_form' }) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :customer_cim_id, :as => :hidden, :input_html => { :value => current_user.customer_cim_id } %>
+    <%= f.input :first_name, :label => "First Name", :input_html => { :value => current_user.first_name } %>
+    <%= f.input :last_name, :label => "Last Name", :input_html => { :value => current_user.last_name } %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :state, :collection => $states %>
+    <%= f.input :country, :collection => PaymentProfile::COUNTRIES %>
+    <%= f.input :zip %>
+    <%= f.input :number , :label => "Credit Card Number"%>
+    <%= f.input :cvv, :label => "CVV <a href='http://en.wikipedia.org/wiki/Card_Security_Code' target='_blank'>?</a>" %>
+    <%= f.input :month, :label => "Expiration Month", :collection => (1..12).to_a, :selected => Time.now.month %>
+    <%= f.input :year, :label => "Expiration Year", :collection => (Time.now.year..Time.now.year + 15).to_a %>
+  <% end %>
+  
+  <%= image_submit_tag 'submit.png', :class => 'signup' %>
+<% end %>

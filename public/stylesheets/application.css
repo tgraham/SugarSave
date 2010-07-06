@@ -123,7 +123,7 @@ hr {
 }
 
 /* Deal Presentation Screen */
-#show_deal, #show_charity {
+#show_deal, #show_charity, #float_left {
   float: left;
   width: 70%;
 }
@@ -220,7 +220,7 @@ table.deal_details_table {
   line-height: 1em;
 }
 
-#side_bar {
+#side_bar, #float_right {
   padding: 2px;
   float: right;
   border-left: 1px solid #888;
@@ -266,6 +266,21 @@ table.deal_details_table {
   font-size: .85em;
   line-height: 1.2em;
   overflow: auto;
+}
+
+.sidemenu li {
+  list-style: none;
+}
+
+.sidemenu li a {
+  display: block;
+  color: #666666;
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+
+.sidemenu li a:hover {
+  background-color: #DDDDDD;
 }
 
 /* Show */
@@ -316,7 +331,7 @@ table.deal_details_table {
   margin: 0 auto;
 }
 
-.normal_form input[type=text], .normal_form textarea {
+.normal_form input[type=text], .normal_form input[type=password], .normal_form textarea {
   font: 13px 'Lucida Grande',Helvetica,Arial,sans-serif;
   outline: 0 none;
   padding: 5px;

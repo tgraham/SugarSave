@@ -11,7 +11,6 @@ class DealsController < ApplicationController
       @cities = City.includes(:state)
       
       if city.count == 0
-        # Need to redirect to form so user can request a city
         return render :city_request
       end
       
@@ -21,7 +20,6 @@ class DealsController < ApplicationController
       @deal = Deal.where('city_id = ?', city).where('deal_date <= ? and end_date >= ?', today, today).where('approved = ?', true).includes(:city).last
       
       if @deal.nil?
-        # Need to add custom deal mesage for city
         return render :coming_soon
       end
       
@@ -55,7 +53,7 @@ class DealsController < ApplicationController
     else
       @deal.end_date = @deal.deal_date
     end
-    
+
     if @deal.save
       flash[:notice] = "Successfully created deal."
       redirect_to deals_path

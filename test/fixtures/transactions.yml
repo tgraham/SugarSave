@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  invoice_id: 1
+  confirmation_id: MyString
+  error: false
+  error_code: MyString
+  error_message: MyString
+
+two:
+  invoice_id: 1
+  confirmation_id: MyString
+  error: false
+  error_code: MyString
+  error_message: MyString

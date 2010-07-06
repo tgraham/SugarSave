@@ -13,12 +13,11 @@ class UsersController < ApplicationController
   
   def create
     if @user.save
-      NotifierMailer.welcome_email(@user).deliver
+      # NotifierMailer.welcome_email(@user).deliver
       flash[:notice] = "Registration Successful."
       if current_user.try(:role) == 'admin'
         redirect_to users_path
-      else
-        redirect_to login_path
+      else redirect_to root_url
       end
     else
       render :action => 'new'
@@ -34,7 +33,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Successfully updated user."
       if current_user.try(:role) == 'admin'
         redirect_to users_path
-      else
+      else 
         redirect_to '/'+city.search_name
       end
     else

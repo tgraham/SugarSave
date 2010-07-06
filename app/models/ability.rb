@@ -20,6 +20,10 @@ class Ability
         can [:show, :edit, :update], User do |current_user|
           user.id == current_user.id || user.role == "admin"
         end
+        can :create, PaymentProfile
+        can [:show, :edit, :update], PaymentProfile do |current_user|
+          user.id == current_user.id || user.role == "admin"
+        end
       end
     end
     
