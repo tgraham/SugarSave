@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-  background-color: #3676B5 /* #4B7399 */;
-  font-family: Helvetica, Arial;
+  background-color: #fff;
+  font-family: Arial, Helvetica;
   font-size: 14px;
 }
 
@@ -37,10 +37,16 @@ a {
   min-height: 100%;
 }
 
+#welcomediv {
+  background: #66CCCC;
+  margin-bottom: 15px;
+}
+
 #logonav {
-	background: url('../images/header.gif') no-repeat;
-	height: 40px;
-	padding: 12px 20px 32px 20px;
+  width: 960px;
+	height: 60px;
+	padding: 0;
+	margin: auto;
 }
 
 #logo a {

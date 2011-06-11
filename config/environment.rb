@@ -10,8 +10,8 @@ module ActiveMerchant
       ActiveMerchant::Billing::Base.mode = :test
       
       gateway = ActiveMerchant::Billing::AuthorizeNetCimGateway.new(
-        :login => '3E3tZxqAd723',
-        :password => '4f22xmNX7sU8L2va'
+        :login => 'LOGIN_INFO',
+        :password => 'PASSWORD_INFO'
       )
       
       if not gateway

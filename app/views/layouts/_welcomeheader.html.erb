@@ -1,0 +1,21 @@
+<div id="welcomediv">
+  <div id="logonav">
+    <div id="logo">
+      <% if current_user.try(:role) == 'admin' %>
+        <%= link_to(image_tag('whitelogo.png', :height => '60'), '/dashboard') %>
+      <% else %>
+        <%= link_to(image_tag('whitelogo.png', :height => '60'), '/') %>
+      <% end %>
+      <% cache 'picker' do %>
+        <%= link_to "Choose a City", '#city_picker', :class => 'picker', :rel => 'facebox' %>
+      <% end %>
+    </div>
+    <div id="topnav">
+      <% if current_user %>
+        <b><%= link_to current_user.username, user_path(current_user) %></b> | <%= link_to "Sign Out", logout_path %>
+      <% else %>
+        <b><%= link_to "Sign Up", register_path %></b> or <%= link_to "Sign In", login_path %>
+      <% end %>
+    </div>
+  </div>
+</div>

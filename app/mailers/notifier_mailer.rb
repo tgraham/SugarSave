@@ -1,6 +1,6 @@
 class NotifierMailer < ActionMailer::Base
-  default :from => "SugarSave <mailer@sugarsave.com>"
-  default :to => "Travis <travis.graham@sugarsave.com>"
+  default :from => "SugarSave <mailer@domain.com>"
+  default :to => "User <user@domain.com>"
   
   def recommendation_email(recommendation)
     @recommendation = recommendation
